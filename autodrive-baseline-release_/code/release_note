@@ -1,0 +1,149 @@
+Date: 2020/03/30
+Version: PPnC_CR2004a_dev01
+Included CRs and Other Changes:
+[CR#00293_ACCS] Update Output and Input singal
+[CR#00319_ACCS] Use High beam light signal as Resume switch for FAW project
+[CR#00302_AEBS] Update State Machine - standstill state
+[CR#00311_AEBS] Update TTC threshold based on reletive velocity
+[CR#00312_AEBS] Set High Speed threshold to inhibit AEB
+[Changes] Update ACCS codes according to 04a API
+[Changes] Update AEBS codes according to 04a API
+[Changes] Update AEBD/LCWS codes according to 04a API
+[Changes] ARBT's 04a API re-structured to include BrakeGroup, PowerGroup, SteerGroup, WarningGroup
+[Changes] Update DCSN codes according to 04a API
+[Changes] Update ALCA codes according to 04a API
+
+Date: 2020/04/02
+Version: PPnC_CR2004a_dev02
+[Changes] Update AEBD/LCWS codes according to  latest 04a API, AEBD adds observed quantities
+[Changes] ACCS delete OBFU transfer module
+[Changes] DCSN model update for CR 320 & CR 321
+[Changes] DCSN add change lane request logic from turn light
+
+Date: 2020/04/08
+Version: PPnC_CR2004a_dev03
+[Changes] ACCS: Improve the logic to get a stable obstacle's acceleartion
+[Changes] ACCS: Change the method of obstacle's information output
+[Changes] ACCS: Change the default value of obstacles's infromation
+[Changes] ACCS: Create new logic to realise information delay when obstacle disappears
+[Changes] AEBD: change the pedal input. delet AEBD_subsystem_integrated_data.c
+
+Date: 2020/04/09
+Version: PPnC_CR2004a_dev04
+[Changes] AEBD: change the input priority
+[Changes] ALCA: update ALCA code, for MPFU does not output lane`s length.
+[Changes] DCSN: Re-Design control mode stateflow
+[Changes] DCSN: Add acc resume signal output
+[Changes] DCSN: Correct change lane request for ALCA
+[Changes] ACCS: Change gas pedal override
+[Changes] ACCS：Change default value of invalid obstacle
+[Changes] ACCS: Change obstable information delay logic
+[Changes] ACCS: Add Static feedforward controller for acceleration
+
+Date: 2020/04/10
+Version: PPnC_CR2004a_dev05
+[Changes] AEBS: Change name of Subsystem1 to Subsystem_monitor
+
+Date: 2020/04/14
+Version: PPnC_CR2004a_dev09
+[Changes] ALCA: update ALCA code.
+
+Date: 2020/04/20
+Version: PPnC_CR2004a_dev10
+[Changes] DCSN: Update change lane logic.
+
+Date: 2020/04/21
+Version: PPnC_CR2004b_dev14e
+[Changes] LCCS: Add heading correction logic based on roll.
+[Changes] LCCS: Change faw control mode logic according to input info
+
+Date: 2020/04/23
+Version: PPnC_CR2004b_
+[Changes] LKAS: LKAS codes and A2L initial upload
+[CR#310001_ARBT] Added logic to include LKA steer arbitration
+[CR#00302_AEBS] Update State Machine - standstill state
+[CR#00340_AEBS] Update TTC threshold based on relative velocity
+[CR#00312_AEBS] Set High Speed threshold to inhibit AEB
+[CR#00313_AEBS] VRU and Non-VRU strategy initial creation
+[CR#00328_DCSN] Create basic logic for change lane request from driver command
+[CR#00330_DCSN] Optimize FAW ADV control mode activation logic
+[Changes] DCSN: Add LKAS logic
+[Changes] Update AEBD/LCWS codes according to 04b API
+
+Date: 2020/04/24
+Version: PPnC_CR2004b_
+[Changes] DCSN: Fix AEBS enable bug
+
+Date: 2020/04/26
+Version: PPnC_CR2004b_
+[Changes] LKAS: Change Enum in A2L and Add some monitor variables
+[Changes] DCSN: Change Enum in A2L
+[Changes] LCWS: change Enum type,Update LCWS codes according to new 04b API
+[Changes] AEBD: Update AEBD codes according to new 04b API
+
+Date: 2020/05/08
+Version: PPnc_CR2005b_dev1a
+[Changes] AEBS: Bug fix for turn state.
+[Changes] DCSN: Update ADM engage/exit/warning logic. Fix change lane request bugs. 
+
+Date: 2020/05/09
+Version: 
+[CR#270002_LCW]  Change 05API. Add LCAS. Delete LCWS
+[CR#270001_LCW]  Change 05API. Add BSDS. delete LCWS
+[Changes]  Adapt to 05b API. Divides LCWS to BSDS and LCAS. totally increase 2000 bytes,35 calibrations, 25 observed quantities.
+
+Date: 2020/05/09
+Version: 
+[Changes] DCSN: Add speed limit for curvature.
+
+Date: 2020/05/19
+Version: PPnc_CR2005b_dev8c
+[Changes] AEBS: Update name of some Calibrations;Update Inhibit and Deactive logic
+[Changes] delete LCAS/BSDS heading and static status OBFU inputs
+
+Date: 2020/05/21
+Version: PPnC_CR2005b_dev09
+[Changes] ARBT: re-mapping the warning signals to two-level alarm requests (low and high)
+[Changes] LCAS/BSDS: input COMM turn indication and EGMO curve for the higher level warning and curve test
+[Changes] LCAS: adds observed quantities
+[Changes] DCSN: Fix lane marker section bug.
+[Changes] COMM: Clear CAN1 RX and TX signals to reserve for high speed CAN
+[Changes] LCCS: Calculate lane width according to valid lanemarker information
+
+Date: 2020/05/22
+Version: PPnC_CR2005b_dev10
+[chagnes] DCSN: Update speed limit logic
+[changes] LKAS: Add new axis for controller calibration
+
+Date: 2020/05/25
+Version: PPnC_CR2005b_dev11
+[chagnes] LKAS: Update code
+
+Date: 2020/05/26
+Version: PPnC_CR2005b_dev12
+[chagnes] AEBS: Update AEBS target selection(d<10,use real nearest point)
+[Changes] COMM: Upload Re-arched COMM code.
+[CR 00286] ACCS:Create logic for still and on coming object
+[CR 220001] ACCS:Add logic for validating input information
+
+Date: 2020/05/26
+Version: PPnC_CR2005b_dev13
+[changes] ACCS: Add new variables
+
+Date: 2020/05/29
+Version: PPnC_CR2005b_dev14
+[Changes] ACCS bug fixed
+
+Date: 2020/06/02
+Version: PPnC_CR2006b_dev1
+[Changes] Update new api
+
+Date: not compiled yet
+Version: PPnC_CR2006b_dev4 not compiled yet)
+[CR 00289] ACCS： Add some logic under stop mode
+[Changes] COMM: Add cruise switch variables from HWIO
+[Changes] COMM: Delete old CAN structure
+[Changes] Update AEBD/LCWS codes according to 06b API
+[Changes] DCSN: Update interface with COMM
+[Changes] ACCS: Update interface with COMM
+[Changes] LCCS: Update interface with COMM

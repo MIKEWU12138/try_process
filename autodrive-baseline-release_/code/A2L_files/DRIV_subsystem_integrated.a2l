@@ -1,0 +1,1605 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     DRIV_subsystem_integrated.a2l
+ *
+ * Code generation for model "DRIV_subsystem_integrated".
+ *
+ * Model version              : 1.1200
+ * Simulink Coder version : 8.13 (R2017b) 24-Jul-2017
+ * C source code generated on : Wed Jun 10 08:46:08 2020
+ * 
+ * Target selection: ert.tlc
+ * Embedded hardware selection: Infineon->TriCore
+ * Code generation objectives: 
+ *    1. MISRA C:2012 guidelines
+ *    2. Safety precaution
+ *    3. Execution efficiency
+ *    4. RAM efficiency
+ *    5. ROM efficiency
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfACCS_t_SwitchLongPressThrsh  
+      /* Long Identifier        */      "As press resume/set switch timer bigge than this calibration,tap up step will use KfACCS_v_TapUpDeltaLongPress"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfACCS_t_SwitchLongPressThrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single_s 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      5.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfACCS_v_TapDownDelta  
+      /* Long Identifier        */      "Tap down delta as press speed down switch"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfACCS_v_TapDownDelta@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single_m_s 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      5.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfACCS_v_TapDownDeltaLongPress  
+      /* Long Identifier        */      "As press set switch timer bigge than KfACCS_t_SwitchLongPressThrsh,tap down step will use this calbiration"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfACCS_v_TapDownDeltaLongPress@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single_m_s 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      5.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfACCS_v_TapUpDelta  
+      /* Long Identifier        */      "Tap up delta as press speed up switch"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfACCS_v_TapUpDelta@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single_m_s 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      5.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfACCS_v_TapUpDeltaLongPress  
+      /* Long Identifier        */      "As press resume switch timer bigge than KfACCS_t_SwitchLongPressThrsh,tap up step will use this calibration"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfACCS_v_TapUpDeltaLongPress@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single_m_s 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      5.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_CoeffStrwhl2Radius  
+      /* Long Identifier        */      "When there's no EGMO, steer wheel angle is used to calculate Radius,
+      Coefficent correction of radius."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_CoeffStrwhl2Radius@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_Veh_Strwhl2FrtwhlRatio  
+      /* Long Identifier        */      "steer ratio =17"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_Veh_Strwhl2FrtwhlRatio@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      17.0 
+      /* Upper Limit            */      20.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_Veh_WheelBase  
+      /* Long Identifier        */      "wheel base"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_Veh_WheelBase@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      3.0 
+      /* Upper Limit            */      3.5
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_d_Dist2LaneChangeFinish  
+      /* Long Identifier        */      "to lane_center distance < 0.4"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_d_Dist2LaneChangeFinish@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_d_TouchedNewLaneDist  
+      /* Long Identifier        */      "when vehicle touched new lane ,the distance to lane can increase in one sample time"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_d_TouchedNewLaneDist@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      2.0 
+      /* Upper Limit            */      5.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_t_TimeEGMOReceivedThrsh  
+      /* Long Identifier        */      "TimeEGMOReceivedThrsh"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_t_TimeEGMOReceivedThrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_t_TimeMPFUReceivedThrsh  
+      /* Long Identifier        */      "TimeMPFUReceivedThrsh"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_t_TimeMPFUReceivedThrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_t_TimeOBFUNReceivedThrsh  
+      /* Long Identifier        */      "TimeOBFUNReceivedThrsh"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_t_TimeOBFUNReceivedThrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_t_WaitTimeDriverDistracted  
+      /* Long Identifier        */      "WaitTimeDriverDistracted"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_t_WaitTimeDriverDistracted@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      8.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_t_WaitTimeLaneChangeFinish  
+      /* Long Identifier        */      "WaitTimeLaneChangeFinish"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_t_WaitTimeLaneChangeFinish@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      4.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfDRIV_w_LaneWidthMax  
+      /* Long Identifier        */      "LaneWidthMax"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfDRIV_w_LaneWidthMax@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      3.0 
+      /* Upper Limit            */      4.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_M_TorqueOverrideThreshold  
+      /* Long Identifier        */      "steer torque threshold "
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_M_TorqueOverrideThreshold@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -10.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_M_TorqueOverrideThreshold_ACC  
+      /* Long Identifier        */      "steer torque threshold ACC"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_M_TorqueOverrideThreshold_ACC@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -5.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_M_TorqueOverrideThreshold_Auto  
+      /* Long Identifier        */      "TorqueOverrideThreshold_Auto"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_M_TorqueOverrideThreshold_Auto@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -5.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_M_TorqueOverrideThreshold_LCC  
+      /* Long Identifier        */      "TorqueOverrideThreshold LCC driver  take over "
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_M_TorqueOverrideThreshold_LCC@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -5.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_M_TorqueThreshold_Distracted  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_M_TorqueThreshold_Distracted@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -5.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_SteerAngleRateThreshold  
+      /* Long Identifier        */      "SteerAngleRateThreshold"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_SteerAngleRateThreshold@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      5.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_SteerAngleThreshold  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_SteerAngleThreshold@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      8.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_TorqueRateThreshold  
+      /* Long Identifier        */      "TorqueRateThreshold"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_TorqueRateThreshold@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_TorqueRate_LC_Threshold  
+      /* Long Identifier        */      "TorqueRate_LC_Threshold"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_TorqueRate_LC_Threshold@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_YawRateThreshold  
+      /* Long Identifier        */      "YawRateThreshold"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_YawRateThreshold@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      3.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_YawRateThreshold2  
+      /* Long Identifier        */      "YawRateThreshold2"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_YawRateThreshold2@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      3.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_c1_threshold  
+      /* Long Identifier        */      "Lane Coefficient c1"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_c1_threshold@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -1.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_k_FilterGain  
+      /* Long Identifier        */      "steer torque  filter gain 0.9"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_k_FilterGain@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_t_PeriodFunctionCall  
+      /* Long Identifier        */      "model  sample time "
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_t_PeriodFunctionCall@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_t_TurnLightLeftOn_Time  
+      /* Long Identifier        */      "TurnLightLeftOn_Time"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_t_TurnLightLeftOn_Time@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      8.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_t_TurnLightOn_Time  
+      /* Long Identifier        */      "TurnLightOn_Time"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_t_TurnLightOn_Time@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      8.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_t_TurnLightRightOn_Time  
+      /* Long Identifier        */      "TurnLightRightOn_Time"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_t_TurnLightRightOn_Time@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      8.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcDRIV_ACCSCancelSwitchDebounceThrsh  
+      /* Long Identifier        */      "ACCS cancel switch debounce thresh."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcDRIV_ACCSCancelSwitchDebounceThrsh@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      200.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcDRIV_ACCSMainSwitchDebounceThrsh  
+      /* Long Identifier        */      "ACCS main switch debounce thresh."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcDRIV_ACCSMainSwitchDebounceThrsh@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      200.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcDRIV_ACCSResumeSwitchDebounceThrsh  
+      /* Long Identifier        */      "ACCS resume switch debounce thresh."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcDRIV_ACCSResumeSwitchDebounceThrsh@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      200.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcDRIV_ACCSSetSwitchDebounceThrsh  
+      /* Long Identifier        */      "ACCS set switch debounce thresh."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcDRIV_ACCSSetSwitchDebounceThrsh@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      200.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcDRIV_ACCSTimeGapMinusDebounceThrsh  
+      /* Long Identifier        */      "ACCS time gap minus switch debounce thresh."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcDRIV_ACCSTimeGapMinusDebounceThrsh@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      200.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcDRIV_ACCSTimeGapPlusDebounceThrsh  
+      /* Long Identifier        */      "ACCS time gap plus switch debounce thresh."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcDRIV_ACCSTimeGapPlusDebounceThrsh@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      200.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      kfDRIV_DelayLoopGain  
+      /* Long Identifier        */      "button delay loop gain "
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@kfDRIV_DelayLoopGain@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbDRIV_DRIVEnable  
+      /* Long Identifier        */      "DRIV mode status is true"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbDRIV_DRIVEnable@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbDRIV_Default_EnableAutoDrive  
+      /* Long Identifier        */      "Default auto drive is false"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbDRIV_Default_EnableAutoDrive@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbDRIV_Default_LaneKeepAssist  
+      /* Long Identifier        */      "default vehicle is lanekeeping"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbDRIV_Default_LaneKeepAssist@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbDRIV_Default_Override_Steering  
+      /* Long Identifier        */      "default override steering  status is false"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbDRIV_Default_Override_Steering@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbDRIV_Update_Override_Steering  
+      /* Long Identifier        */      "update override steering status is true"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbDRIV_Update_Override_Steering@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      DRIV_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfDRIV_Steer_Torque_Rate
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfDRIV_Steer_Torque_Rate@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfDRIV_yawrate
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfDRIV_yawrate@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfDRIV_c1_heading
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfDRIV_c1_heading@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfDRIV_ACCDriveSetSpeed
+      /* Long identifier        */      "Driver set target speed(Consider with speed up/down switch)"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_single_m_s
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      50.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfDRIV_ACCDriveSetSpeed@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfDRIV_steer_angle
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfDRIV_steer_angle@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfDRIV_SteerAngleRate
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfDRIV_SteerAngleRate@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfDRIV_Steer_Torque_Filter
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfDRIV_Steer_Torque_Filter@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfDRIV_ACCTimeGap
+      /* Long identifier        */      "Driver set time gap"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      8.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfDRIV_ACCTimeGap@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_Norm_driving
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_Norm_driving@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_Driver_Take_Over
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_Driver_Take_Over@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_Driver_Distracted
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_Driver_Distracted@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDIRV_Override_Steering
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDIRV_Override_Steering@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_LeftSide_LC_Req
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_LeftSide_LC_Req@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_RightSide_LC_Req
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_RightSide_LC_Req@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_LaneChangeReady_Req
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_LaneChangeReady_Req@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_LaneChanging_Req
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_LaneChanging_Req@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_LaneChangeFinish_Req
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_LaneChangeFinish_Req@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_LC_Enable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_LC_Enable@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_TurnType
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_TurnType@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_Update_Override_Steering
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_Update_Override_Steering@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_LaneKeepAssist
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_LaneKeepAssist@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_Touched_new_lane
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_Touched_new_lane@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_ACCResumeSwitch
+      /* Long identifier        */      "ACC resume switch status"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_ACCResumeSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_ACCCancelSwitch
+      /* Long identifier        */      "ACC cancel switch status"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      1.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_ACCCancelSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbDRIV_ACCMainSwitch
+      /* Long identifier        */      "ACC main switch status"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0.0
+      /* Upper limit            */      0.0
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbDRIV_ACCMainSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeDRIV_LeftChangeLane
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_EnumDRIV_LeftChangeLane
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      3
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeDRIV_LeftChangeLane@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeDRIV_RightChangeLane
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      DRIV_subsystem_integrated_CM_EnumDRIV_RightChangeLane
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      3
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeDRIV_RightChangeLane@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      DRIV_subsystem_integrated_CM_single_s
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "s"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      DRIV_subsystem_integrated_CM_single_m_s
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "m/s"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      DRIV_subsystem_integrated_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      DRIV_subsystem_integrated_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      DRIV_subsystem_integrated_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      DRIV_subsystem_integrated_CM_EnumDRIV_LeftChangeLane
+      /* Long identifier        */      "Enumerated data type: EnumDRIV_LeftChangeLane"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      ""
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_DRIV_subsystem_integrated_CM_EnumDRIV_LeftChangeLane
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_DRIV_subsystem_integrated_CM_EnumDRIV_LeftChangeLane
+      /* Long identifier        */      "Enumerated data type: EnumDRIV_LeftChangeLane"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      4
+      /* Table Element          */      0 "LeftLC_NOT"
+      /* Table Element          */      1 "LeftLC_Ready"
+      /* Table Element          */      2 "LeftLC_Ing"
+      /* Table Element          */      3 "LeftLC_Finish"
+    /end COMPU_VTAB
+    
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      DRIV_subsystem_integrated_CM_EnumDRIV_RightChangeLane
+      /* Long identifier        */      "Enumerated data type: EnumDRIV_RightChangeLane"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      ""
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_DRIV_subsystem_integrated_CM_EnumDRIV_RightChangeLane
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_DRIV_subsystem_integrated_CM_EnumDRIV_RightChangeLane
+      /* Long identifier        */      "Enumerated data type: EnumDRIV_RightChangeLane"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      4
+      /* Table Element          */      0 "RightLC_NOT"
+      /* Table Element          */      1 "RightLC_Ready"
+      /* Table Element          */      2 "RightLC_Ing"
+      /* Table Element          */      3 "RightLC_Finish"
+    /end COMPU_VTAB
+    
+    
+    /begin GROUP 
+      /* Name                   */       DRIV_subsystem_integrated
+      /* Long identifier        */       "DRIV_subsystem_integrated"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_DRIV_
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_DRIV_
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV "
+      /begin SUB_GROUP
+        S1_CheckDRIV_SignalInput
+        S1_CheckDRIV_SignalOutput
+        S1_DtrmnDRIV_RunStatus
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_CheckDRIV_SignalInput
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /CheckDRIV_SignalInput"
+      /begin SUB_GROUP
+        S3_Fault_Detection
+        S3_Subsystem
+        S3_Subsystem1
+        S3_adc_path_prediction
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VfDRIV_steer_angle
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_CheckDRIV_SignalOutput
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /CheckDRIV_SignalOutput"
+      /begin REF_CHARACTERISTIC
+        KbDRIV_DRIVEnable
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_DtrmnDRIV_RunStatus
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus"
+      /begin SUB_GROUP
+        S5_DtrmnDRIV_OvrdButtonStatus
+        S5_DtrmnDRIV_OvrdSteerStatus
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KbDRIV_Default_EnableAutoDrive
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_Fault_Detection
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /CheckDRIV_SignalInput/Fault Detection"
+      /begin REF_CHARACTERISTIC
+        KfDRIV_t_TimeEGMOReceivedThrsh
+        KfDRIV_t_TimeMPFUReceivedThrsh
+        KfDRIV_t_TimeOBFUNReceivedThrsh
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_Subsystem
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /CheckDRIV_SignalInput/Subsystem"
+      /begin REF_CHARACTERISTIC
+        kfDRIV_k_FilterGain
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VfDRIV_Steer_Torque_Filter
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_Subsystem1
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /CheckDRIV_SignalInput/Subsystem1"
+      /begin REF_CHARACTERISTIC
+        kfDRIV_t_PeriodFunctionCall
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VfDRIV_SteerAngleRate
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_adc_path_prediction
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /CheckDRIV_SignalInput/adc_path_prediction"
+      /begin REF_CHARACTERISTIC
+        KfDRIV_CoeffStrwhl2Radius
+        KfDRIV_Veh_Strwhl2FrtwhlRatio
+        KfDRIV_Veh_WheelBase
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_DtrmnDRIV_OvrdButtonStatus
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdButtonStatus"
+      /begin SUB_GROUP
+        S28_DtrmnDRIV_ACC_Switch
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        kfDRIV_DelayLoopGain
+        kfDRIV_t_PeriodFunctionCall
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_DtrmnDRIV_OvrdSteerStatus
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus"
+      /begin SUB_GROUP
+        S29_DtrmnDRIV_LaneChange_Judge
+        S29_DtrmnDRIV_OverrideSteering
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S28_DtrmnDRIV_ACC_Switch
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdButtonStatus/DtrmnDRIV_ACC_Switch"
+      /begin SUB_GROUP
+        S30_DtrmnDRIV_TargetTimeGap
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KcDRIV_ACCSCancelSwitchDebounceThrsh
+        KcDRIV_ACCSMainSwitchDebounceThrsh
+        KcDRIV_ACCSResumeSwitchDebounceThrsh
+        KcDRIV_ACCSSetSwitchDebounceThrsh
+        KcDRIV_ACCSTimeGapMinusDebounceThrsh
+        KcDRIV_ACCSTimeGapPlusDebounceThrsh
+        KfACCS_t_SwitchLongPressThrsh
+        KfACCS_v_TapDownDelta
+        KfACCS_v_TapDownDeltaLongPress
+        KfACCS_v_TapUpDelta
+        KfACCS_v_TapUpDeltaLongPress
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbDRIV_ACCCancelSwitch
+        VbDRIV_ACCMainSwitch
+        VbDRIV_ACCResumeSwitch
+        VfDRIV_ACCDriveSetSpeed
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S29_DtrmnDRIV_LaneChange_Judge
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge"
+      /begin SUB_GROUP
+        S48_DRIV_LC_Intention_Judge
+        S48_DRIV_OverrideSteer_DefaultData
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KfDRIV_d_TouchedNewLaneDist
+        KfDRIV_w_LaneWidthMax
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S29_DtrmnDRIV_OverrideSteering
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_OverrideSteering"
+      /begin SUB_GROUP
+        S49_driver_Normal_driving
+        S49_driver_distracted
+        S49_driver_take_over
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VbDIRV_Override_Steering
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S30_DtrmnDRIV_TargetTimeGap
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdButtonStatus/DtrmnDRIV_ACC_Switch/DtrmnDRIV_TargetTimeGap"
+      /begin REF_MEASUREMENT
+        VfDRIV_ACCTimeGap
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S48_DRIV_LC_Intention_Judge
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge"
+      /begin SUB_GROUP
+        S50_CheckLCLogiCondition
+        S50_CheckLCProcess
+        S50_DtrmnDRIV_OverrideSteerStatus
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S48_DRIV_OverrideSteer_DefaultData
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_OverrideSteer_DefaultData"
+      /begin REF_CHARACTERISTIC
+        KbDRIV_Default_LaneKeepAssist
+        KbDRIV_Default_Override_Steering
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S49_driver_Normal_driving
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_OverrideSteering/driver_Normal_driving"
+      /begin REF_CHARACTERISTIC
+        kfDRIV_M_TorqueOverrideThreshold
+        kfDRIV_TorqueRateThreshold
+        kfDRIV_t_PeriodFunctionCall
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbDRIV_Norm_driving
+        VfDRIV_Steer_Torque_Rate
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S49_driver_distracted
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_OverrideSteering/driver_distracted"
+      /begin REF_CHARACTERISTIC
+        KfDRIV_t_WaitTimeDriverDistracted
+        kfDRIV_M_TorqueOverrideThreshold_Auto
+        kfDRIV_M_TorqueThreshold_Distracted
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbDRIV_Driver_Distracted
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S49_driver_take_over
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_OverrideSteering/driver_take_over"
+      /begin REF_CHARACTERISTIC
+        kfDRIV_M_TorqueOverrideThreshold_ACC
+        kfDRIV_M_TorqueOverrideThreshold_LCC
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbDRIV_Driver_Take_Over
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S50_CheckLCLogiCondition
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge/CheckLCLogiCondition"
+      /begin SUB_GROUP
+        S52_CheckTurntype
+        S52_lc_side_estimate
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VbDRIV_LC_Enable
+        VfDRIV_yawrate
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S50_CheckLCProcess
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge/CheckLCProcess"
+      /begin SUB_GROUP
+        S53_CheckLCFinish
+        S53_CheckLCIng
+        S53_CheckLCReady
+        S53_Subsystem
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VbDRIV_Touched_new_lane
+        VfDRIV_c1_heading
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S50_DtrmnDRIV_OverrideSteerStatus
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge/DtrmnDRIV_OverrideSteerStatus"
+      /begin SUB_GROUP
+        S54_DRIV_Out
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VbDRIV_LaneKeepAssist
+        VeDRIV_LeftChangeLane
+        VeDRIV_RightChangeLane
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S52_CheckTurntype
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge/CheckLCLogiCondition/CheckTurntype"
+      /begin REF_MEASUREMENT
+        VbDRIV_TurnType
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S52_lc_side_estimate
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge/CheckLCLogiCondition/lc_side_estimate"
+      /begin REF_CHARACTERISTIC
+        kfDRIV_SteerAngleThreshold
+        kfDRIV_t_TurnLightLeftOn_Time
+        kfDRIV_t_TurnLightRightOn_Time
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbDRIV_LeftSide_LC_Req
+        VbDRIV_RightSide_LC_Req
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S53_CheckLCFinish
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge/CheckLCProcess/CheckLCFinish"
+      /begin REF_CHARACTERISTIC
+        KfDRIV_d_Dist2LaneChangeFinish
+        KfDRIV_t_WaitTimeLaneChangeFinish
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S53_CheckLCIng
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge/CheckLCProcess/CheckLCIng"
+      /begin REF_CHARACTERISTIC
+        kfDRIV_YawRateThreshold2
+        kfDRIV_c1_threshold
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S53_CheckLCReady
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge/CheckLCProcess/CheckLCReady"
+      /begin REF_CHARACTERISTIC
+        kfDRIV_SteerAngleRateThreshold
+        kfDRIV_TorqueRate_LC_Threshold
+        kfDRIV_YawRateThreshold
+        kfDRIV_t_PeriodFunctionCall
+        kfDRIV_t_TurnLightOn_Time
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S53_Subsystem
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge/CheckLCProcess/Subsystem"
+      /begin REF_MEASUREMENT
+        VbDRIV_LaneChangeFinish_Req
+        VbDRIV_LaneChangeReady_Req
+        VbDRIV_LaneChanging_Req
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S54_DRIV_Out
+      /* Long identifier        */       "DRIV_subsystem_integrated/DRIV /DtrmnDRIV_RunStatus/DtrmnDRIV_OvrdSteerStatus/DtrmnDRIV_LaneChange_Judge/DRIV_LC_Intention_Judge/DtrmnDRIV_OverrideSteerStatus/DRIV_Out"
+      /begin REF_CHARACTERISTIC
+        KbDRIV_Update_Override_Steering
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbDRIV_Update_Override_Steering
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF DRIV_subsystem_integrated.a2l */

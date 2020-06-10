@@ -1,0 +1,3520 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     COMM_subsystem_integrated.a2l
+ *
+ * Code generation for model "COMM_subsystem_integrated".
+ *
+ * Model version              : 1.1787
+ * Simulink Coder version : 8.13 (R2017b) 24-Jul-2017
+ * C source code generated on : Wed Jun 10 09:16:41 2020
+ * 
+ * Target selection: ert.tlc
+ * Embedded hardware selection: Infineon->TriCore
+ * Code generation objectives: 
+ *    1. MISRA C:2012 guidelines
+ *    2. Safety precaution
+ *    3. Execution efficiency
+ *    4. RAM efficiency
+ *    5. ROM efficiency
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_BrakePedalMax  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_BrakePedalMax@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_BrakePedalMin  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_BrakePedalMin@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_FirstGearRatio  
+      /* Long Identifier        */      "Gear ratio in 1st gear."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_FirstGearRatio@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_GasPedalMax  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_GasPedalMax@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_GasPedalMaxEPB  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_GasPedalMaxEPB@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_GasPedalMin  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_GasPedalMin@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_GasPedalMinEPB  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_GasPedalMinEPB@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_GasPedalRampEPB  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_GasPedalRampEPB@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Cmd_AccPelPosAct  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Cmd_AccPelPosAct@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Cmd_BrkPelPosAct  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Cmd_BrkPelPosAct@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Cmd_StrAngle  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Cmd_StrAngle@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Cmd_StrAngleSpd  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Cmd_StrAngleSpd@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Decs_Acc_Value  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Decs_Acc_Value@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Decs_Breake_Value  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Decs_Breake_Value@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Tar_vehiclespd  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Tar_vehiclespd@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfACCS_d_VEH_WheelDiameter  
+      /* Long Identifier        */      "This is whell diameter"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfACCS_d_VEH_WheelDiameter@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_mm 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      2000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_Ang_VEH_AngOrigin2FrontWheel  
+      /* Long Identifier        */      "This is the angle between origin to front axle and origin to front wheel"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_Ang_VEH_AngOrigin2FrontWheel@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_rad 
+      /* Lower Limit            */      -3.14 
+      /* Upper Limit            */      3.14
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_VEH_Mass  
+      /* Long Identifier        */      "Vehicle mass"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_VEH_Mass@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_kg 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_VEH_StiffnessFront  
+      /* Long Identifier        */      "This is cornering stiffness of front wheel"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_VEH_StiffnessFront@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_N_deg 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_VEH_StiffnessRear  
+      /* Long Identifier        */      "This is cornering stiffness of rear wheel"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_VEH_StiffnessRear@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_N_deg 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0E+6
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_VEH_YawInertia_Z  
+      /* Long Identifier        */      "Moment of inertia of the whole vehicle around z axis"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_VEH_YawInertia_Z@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_kg_m2 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_a_VCULongAccOffset  
+      /* Long Identifier        */      "Offset to override Longitudinal Acceleration."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_a_VCULongAccOffset@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_d_VEH_DisCentorid2Front  
+      /* Long Identifier        */      "This is the distance between Cetroid and Front surface"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_d_VEH_DisCentorid2Front@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_mm 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_d_VEH_DisFront2Rear  
+      /* Long Identifier        */      "This is distance between two axes"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_d_VEH_DisFront2Rear@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_mm 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_d_VEH_DisLeft2Right  
+      /* Long Identifier        */      "This is the distance between left wheel and right wheel"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_d_VEH_DisLeft2Right@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_mm 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      5000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_d_VEH_DisOrigin2End  
+      /* Long Identifier        */      "This is the distance between the cordinate origin and the rear surface"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_d_VEH_DisOrigin2End@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_mm 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_d_VEH_DisOrigin2FrontWheel  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_d_VEH_DisOrigin2FrontWheel@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_mm 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_d_VEH_DisOrigin2Head  
+      /* Long Identifier        */      "This is the distance between the coordinate origin and the front surface"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_d_VEH_DisOrigin2Head@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_mm 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_d_VEH_DisOrigin2RearAxle  
+      /* Long Identifier        */      "This is the distance between the cordinate origin and the rear axle"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_d_VEH_DisOrigin2RearAxle@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_mm 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_d_VEH_Length  
+      /* Long Identifier        */      "This is vehicle length"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_d_VEH_Length@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_mm 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      20000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_d_VEH_MinTurnRadius  
+      /* Long Identifier        */      "Minimum turning radius"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_d_VEH_MinTurnRadius@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_m 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      30.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_d_VEH_Width  
+      /* Long Identifier        */      "Vehicle's width"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_d_VEH_Width@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single_mm 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      5000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfCOMM_r_VCULongAccSlope  
+      /* Long Identifier        */      "Slope to override Longitudinal Acceleration."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfCOMM_r_VCULongAccSlope@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Cmd_ATOModEnable  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Cmd_ATOModEnable@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Cmd_TgtSft  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Cmd_TgtSft@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Decs_Acc_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Decs_Acc_Req@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_mode  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_mode@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_TorqCtrlPriority_Active  
+      /* Long Identifier        */      "The priority of the Torque Override Control Mode send to VCU in ADV active state.
+      0 - Highest priority.
+      1 - High priority.
+      2 - Medium priority.
+      3 - Low priority."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_TorqCtrlPriority_Active@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_TorqCtrlPriority_Default  
+      /* Long Identifier        */      "The priority of the Torque Override Control Mode send to VCU in default state.
+      0 - Highest priority.
+      1 - High priority.
+      2 - Medium priority.
+      3 - Low priority."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_TorqCtrlPriority_Default@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KeCOMM_Test_Cmd_ParkingCtrlValue  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KeCOMM_Test_Cmd_ParkingCtrlValue@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KeCOMM_VehicleCANbusConfig  
+      /* Long Identifier        */      "Vehicle Platform and CAN Bus Configuration.
+      1 - JAC#1;
+      2 - JAC#2 or iVISTA;
+      3 - ICPV;
+      4 - GLB;
+      5 - FAW;
+      6 - HZBus;
+      7 - USdemo."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KeCOMM_VehicleCANbusConfig@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_BckFogLamp_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_BckFogLamp_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_BrakePrechargeRequest  
+      /* Long Identifier        */      "Test mode value for brake boost precharge request."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_BrakePrechargeRequest@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Cmd_AccPelEnable  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Cmd_AccPelEnable@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Cmd_BrakeLightReq  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Cmd_BrakeLightReq@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Cmd_BrkPelEnable  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Cmd_BrkPelEnable@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Cmd_ParkingCtrlEnable  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Cmd_ParkingCtrlEnable@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Cmd_TgtSftEnable  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Cmd_TgtSftEnable@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Decs_DippedBeam_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Decs_DippedBeam_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Decs_HighBeam_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Decs_HighBeam_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Decs_LftLmp_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Decs_LftLmp_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Decs_Light_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Decs_Light_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Decs_RihtLmp_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Decs_RihtLmp_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Decs_iBCM_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Decs_iBCM_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_FrontFogLamp_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_FrontFogLamp_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Horn_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Horn_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Over_Speed  
+      /* Long Identifier        */      "SLEW value for Over Speed."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Over_Speed@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_SlowDown_Indication  
+      /* Long Identifier        */      "SLEW value for SpeedUp_Indication."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_SlowDown_Indication@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_SpeedUp_Indication  
+      /* Long Identifier        */      "SLEW value for SpeedUp_Indication."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_SpeedUp_Indication@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_Stop_Request  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_Stop_Request@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_WarnLight_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_WarnLight_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_Test_driveoff_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_Test_driveoff_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbCOMM_VEH_UseNewConfig  
+      /* Long Identifier        */      "This calibartion can change to a new vehicle configure which can be calibrated"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbCOMM_VEH_UseNewConfig@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Cmd_EPSXBW_En  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Cmd_EPSXBW_En@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Cmd_EPSXBW_En_ovr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Cmd_EPSXBW_En_ovr@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Cmd_StrAngle_ovr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Cmd_StrAngle_ovr@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Decs_Acc_Req_ovr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Decs_Acc_Req_ovr@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Decs_Acc_Value_ovr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Decs_Acc_Value_ovr@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Decs_Breake_Req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Decs_Breake_Req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Decs_Breake_Req_ovr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Decs_Breake_Req_ovr@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcCOMM_Test_Decs_Breake_Value_ovr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcCOMM_Test_Decs_Breake_Value_ovr@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      COMM_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbHWIO_DriverModeComd
+      /* Long identifier        */      "Drive Mode Command from HWIO."
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbHWIO_DriverModeComd@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbHWIO_LeftTurningLightState
+      /* Long identifier        */      "Left Turning Light State from HWIO."
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbHWIO_LeftTurningLightState@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbHWIO_RightTurningLightState
+      /* Long identifier        */      "Right Turning Light State from HWIO."
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbHWIO_RightTurningLightState@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbHWIO_ACC_MainSwitch
+      /* Long identifier        */      "ACC Main Switch from HWIO."
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbHWIO_ACC_MainSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbHWIO_ACC_ResumeSwitch
+      /* Long identifier        */      "ACC Resume Switch from HWIO."
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbHWIO_ACC_ResumeSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbHWIO_ACC_SetSwitch
+      /* Long identifier        */      "ACC Set Switch from HWIO."
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbHWIO_ACC_SetSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbHWIO_ACC_TimeGapPlus
+      /* Long identifier        */      "ACC Time Gap Plus from HWIO."
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbHWIO_ACC_TimeGapPlus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbHWIO_ACC_TimeGapMinus
+      /* Long identifier        */      "ACC Time Gap Minus from HWIO."
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbHWIO_ACC_TimeGapMinus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbHWIO_ACC_CancelSwitch
+      /* Long identifier        */      "ACC Cancel Switch from HWIO."
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbHWIO_ACC_CancelSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_ADCU_BrakeDecelValue
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_ADCU_BrakeDecelValue@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_ADCU_PowerAccelValue
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_ADCU_PowerAccelValue@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_ADCU_SteeringAngleValue
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_ADCU_SteeringAngleValue@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_ADCU_TargetVehicleSpeed
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_ADCU_TargetVehicleSpeed@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_ADCU_PowerTorqueValue
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_ADCU_PowerTorqueValue@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_ADCU_BrakePressureValue
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_ADCU_BrakePressureValue@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_max_gas_pedal_EPB
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_max_gas_pedal_EPB@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_TCU_ActualGearRatio
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_TCU_ActualGearRatio@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_YawRate
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_YawRate@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_VehicleSpeed
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_VehicleSpeed@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_WheelSpeed_RR1
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_WheelSpeed_RR1@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_LongAcceleration
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_LongAcceleration@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_LateralAcceleration
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_LateralAcceleration@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_WheelSpeed_RR2
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_WheelSpeed_RR2@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_WheelSpeed_RL1
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_WheelSpeed_RL1@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_WheelSpeed_RL2
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_WheelSpeed_RL2@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_EPS_TargetSteeringAngleEcho
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_EPS_TargetSteeringAngleEcho@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_EPS_ActualSteeringAngle
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_EPS_ActualSteeringAngle@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_EPS_SteeringAngleRate
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_EPS_SteeringAngleRate@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_WheelSpeed_FR
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_WheelSpeed_FR@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_WheelSpeed_FL
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_WheelSpeed_FL@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VCU_VirtualAccelPedalPosition
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VCU_VirtualAccelPedalPosition@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_EMS_EngineSpeed
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_EMS_EngineSpeed@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_PCU_DriverDemandTorque
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_PCU_DriverDemandTorque@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_PCU_ActualEngineTorque
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_PCU_ActualEngineTorque@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_EMS_CatalystTankLevel
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_EMS_CatalystTankLevel@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VCU_ActualAccelPedalPosition
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VCU_ActualAccelPedalPosition@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VCU_TargetAccelPedalPostionEcho
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VCU_TargetAccelPedalPostionEcho@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_PCU_BatterySOC
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_PCU_BatterySOC@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_PCU_MotorSpeed
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_PCU_MotorSpeed@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_PCU_MotorActualTorque
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_PCU_MotorActualTorque@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_PCU_EngineTorqueLoss
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_PCU_EngineTorqueLoss@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_EPS_SteeringWheelTorque
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_EPS_SteeringWheelTorque@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VCU_TargetBrakePedalEcho
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VCU_TargetBrakePedalEcho@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VCU_ActualBrakePedalPosition
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VCU_ActualBrakePedalPosition@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_ESP_MasterCylinderPress
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_ESP_MasterCylinderPress@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_WheelEncoderCounter_RL
+      /* Long identifier        */      ""
+      /* Data type              */      ULONG
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint32
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      4294967295
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_WheelEncoderCounter_RL@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_VDC_WheelEncoderCounter_RR
+      /* Long identifier        */      ""
+      /* Data type              */      ULONG
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint32
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      4294967295
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_VDC_WheelEncoderCounter_RR@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_EMS_EngineCoolantTemperature
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      COMM_subsystem_integrated_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_EMS_EngineCoolantTemperature@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_EMS_EngineOilPressure
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_EMS_EngineOilPressure@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_VCU_AutoToManualTips
+      /* Long identifier        */      "\"Reason for not being able to enter automatic driving status (16 bits represent different conditions (starting from 1):
+      
+      Bit 1: comfort can bus off;
+      
+      Bit 2: power can bus off:
+      
+      Bit 3: adv control mode message timeout
+      
+      Bit 4: adv torque request message CS / LS fault;
+      
+      Bit 5: pull down the handbrake switch;
+      
+      Bit 6: The Trailer hand brake switch is pulled down;
+      
+      Bit 7: Cruise activation;
+      
+      Bit 8: when the accelerator is depressed, it is greater than a certain threshold;
+      
+      Bit 9: when the accelerator pedal fails;
+      
+      Bit 10: the brake pedal is depressed;
+      
+      Bit 11: brake pedal failure;
+      
+      Bit 12: intelligent driving function shielding. \""
+      /* Data type              */      UWORD
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_VCU_AutoToManualTips@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfCOMM_ESP_BrakeAirTankPressure
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfCOMM_ESP_BrakeAirTankPressure@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_ADCU_TargetGearValue
+      /* Long identifier        */      "Target Gear (0:Neutral;1-12:ForwardGears;13:Reverse;14Park;15:Invalid)"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_ADCU_TargetGearValue@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_ADCU_ParkingControlValue
+      /* Long identifier        */      "Park control status (0: release; 1: clamp)"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_ADCU_ParkingControlValue@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_TCU_TargetGearPositionEcho
+      /* Long identifier        */      "Target gear received by TCU from ADCU (0: neutral; 1-12: forwardgears; 13: reverse; 14park; 15: invalid)"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_TCU_TargetGearPositionEcho@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_TCU_ShiftLevelPosition
+      /* Long identifier        */      "ShiftLevelPosition£¨PRNDL£©£¨0£ºPark;1:Reverse;2:Neutral;3:Drive£©"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_TCU_ShiftLevelPosition@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_TCU_ActualGearPosition
+      /* Long identifier        */      "Actual gear(0:Neutral;1-12:ForwardGears;13:Reverse;14Park;15:Invalid)
+      "
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_TCU_ActualGearPosition@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_EPS_SteeringModeEcho
+      /* Long identifier        */      "Target corner status received by EPS from ADCU (0: driver; 1: steeringangle; 2: steeringwheeltorque)"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_EPS_SteeringModeEcho@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_EMS_StartStopStatus
+      /* Long identifier        */      "
+      0-Reset Start/Stop not active(any engine condition possible)
+      "
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_EMS_StartStopStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_EMS_EngineState
+      /* Long identifier        */      "Engine status (0: keyoff; 1: ACC; 2: Keyon; 3: crank; 4: run)"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_EMS_EngineState@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_PCU_PowertrainFaultLevel
+      /* Long identifier        */      "Power system fault level (0: nofault)"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_PCU_PowertrainFaultLevel@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_EPS_FaultLevel
+      /* Long identifier        */      "Steering performance fault level (0: nofault)"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_EPS_FaultLevel@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_BCM_CruiseControlStatus
+      /* Long identifier        */      "Cruise control status"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_BCM_CruiseControlStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_BCM_DriveMode
+      /* Long identifier        */      "
+      BCM_DM_TargetModeReq£¨0£ºNormal£»1£ºSport£»2£ºEco£»other£ºReserve£©
+      "
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_BCM_DriveMode@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_ESP_SystemFaultStatus
+      /* Long identifier        */      "ESP system fault status (0: normal)"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_ESP_SystemFaultStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_EPB_SystemFaultStatus
+      /* Long identifier        */      "ESP system fault status (0: normal)"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_EPB_SystemFaultStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeCOMM_EPB_ActualControlStatus
+      /* Long identifier        */      "EPB actual control status (0: release)"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeCOMM_EPB_ActualControlStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_EmergencyLightRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_EmergencyLightRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_RightTurningLightRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_RightTurningLightRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_PositionLightRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_PositionLightRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_LeftTurningLightRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_LeftTurningLightRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_HornRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_HornRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_HighBeamRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_HighBeamRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_FrontFogLightRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_FrontFogLightRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_LowBeamRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_LowBeamRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_BrakeLightRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_BrakeLightRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_BackFogLghtRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_BackFogLghtRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_AutodriveEnable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_AutodriveEnable@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_BCMControlEnable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_BCMControlEnable@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_TargetGearEnable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_TargetGearEnable@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_SteeringAngleEnable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_SteeringAngleEnable@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_ParkingPressureRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_ParkingPressureRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_LaunchRequest
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_LaunchRequest@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_ParkingControlEnable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_ParkingControlEnable@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_PowerEnable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_PowerEnable@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_BrakeEnable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_BrakeEnable@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_SpeedDownIndicator
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_SpeedDownIndicator@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_SpeedUpIndicator
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_SpeedUpIndicator@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ADCU_OverSpeedWarning
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ADCU_OverSpeedWarning@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VDC_YawRateValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VDC_YawRateValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VDC_LongAccelerationValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VDC_LongAccelerationValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_EPS_SteeringWheelTorqueValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_EPS_SteeringWheelTorqueValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VDC_LateralAccelerationValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VDC_LateralAccelerationValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_EPS_SteeringControlResponse_LDW
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_EPS_SteeringControlResponse_LDW@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_EPS_SteeringControlResponse_LCC
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_EPS_SteeringControlResponse_LCC@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VDC_WheelSpeed_RR1Valid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VDC_WheelSpeed_RR1Valid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VDC_WheelSpeed_RR2Valid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VDC_WheelSpeed_RR2Valid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VDC_WheelSpeed_RL1Valid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VDC_WheelSpeed_RL1Valid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VDC_WheelSpeed_FLValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VDC_WheelSpeed_FLValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VDC_WheelSpeed_RL2Valid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VDC_WheelSpeed_RL2Valid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VDC_WheelSpeed_FRValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VDC_WheelSpeed_FRValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_EMS_EngineSpeedValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_EMS_EngineSpeedValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VCU_VirtualAccelPedalValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VCU_VirtualAccelPedalValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VCU_AccelPedalOverride
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VCU_AccelPedalOverride@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_EMS_CoolantLevelLow
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_EMS_CoolantLevelLow@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_PCU_PowerControlResponse
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_PCU_PowerControlResponse@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VCU_AccelPedalValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VCU_AccelPedalValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_EPS_HandsOnWheelDetected
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_EPS_HandsOnWheelDetected@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_EPS_HandsOffWheelDetected
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_EPS_HandsOffWheelDetected@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VCU_AutodriveMainSwitch
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VCU_AutodriveMainSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_CruiseSwLimitMain
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_CruiseSwLimitMain@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_DriverSeatBelt
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_DriverSeatBelt@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_DriverSeatBeltValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_DriverSeatBeltValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_TurningLightEcho
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_TurningLightEcho@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_LowBeamSwitch
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_LowBeamSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_HighBeamSwitch
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_HighBeamSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_BrakeLightStatus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_BrakeLightStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_LeftTurningLightState
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_LeftTurningLightState@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_RightTurningLightState
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_RightTurningLightState@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VCU_AutodriveActiveStatus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VCU_AutodriveActiveStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_IgnitionKeyState
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_IgnitionKeyState@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_DriverDoorStatus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_DriverDoorStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_PassengerDoorStatus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_PassengerDoorStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_FrontHoodStatus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_FrontHoodStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_RearRightDoorStatus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_RearRightDoorStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_RearLeftDoorStatus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_RearLeftDoorStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_BackTrunkStatus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_BackTrunkStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_WiperSwitch
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_WiperSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_ControlResponse
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_ControlResponse@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_CruiseSwValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_CruiseSwValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_CruiseSwResume
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_CruiseSwResume@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_CruiseSwSet
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_CruiseSwSet@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_CruiseSwTimeGapPlus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_CruiseSwTimeGapPlus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_CruiseSwTimeGapMinus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_CruiseSwTimeGapMinus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_BCM_CruiseSwMain
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_BCM_CruiseSwMain@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ESP_TCSActive
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ESP_TCSActive@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ESP_ABSActive
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ESP_ABSActive@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_EPB_AutoholdStatus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_EPB_AutoholdStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_EPB_ParkingControlResponse
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_EPB_ParkingControlResponse@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_EPB_SwitchStatus
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_EPB_SwitchStatus@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VCU_BrakePedalValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VCU_BrakePedalValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ESP_BrakeControlResponse
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ESP_BrakeControlResponse@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_VCU_ActualBrakePedalSwitch
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_VCU_ActualBrakePedalSwitch@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbCOMM_ESP_MasterCylinderPressValid
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      COMM_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbCOMM_ESP_MasterCylinderPressValid@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_single_mm
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "mm"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_single_rad
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "rad"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_single_kg
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "kg"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_single_N_deg
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "N/deg"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_single_kg_m2
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "kg*m2"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_single_m
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "m"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_uint32
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%10.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_int16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      COMM_subsystem_integrated_CM_uint16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       COMM_subsystem_integrated
+      /* Long identifier        */       "COMM_subsystem_integrated"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_Receive
+        Root_Transmit
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VbHWIO_ACC_CancelSwitch
+        VbHWIO_ACC_MainSwitch
+        VbHWIO_ACC_ResumeSwitch
+        VbHWIO_ACC_SetSwitch
+        VbHWIO_ACC_TimeGapMinus
+        VbHWIO_ACC_TimeGapPlus
+        VbHWIO_DriverModeComd
+        VbHWIO_LeftTurningLightState
+        VbHWIO_RightTurningLightState
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_Receive
+      /* Long identifier        */       "COMM_subsystem_integrated/Receive"
+      /begin SUB_GROUP
+        S1_Subsystem
+        S1_iEV7S_New
+        S1_iVISTA_New
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KbCOMM_VEH_UseNewConfig
+        KeCOMM_VehicleCANbusConfig
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbCOMM_BCM_BackTrunkStatus
+        VbCOMM_BCM_BrakeLightStatus
+        VbCOMM_BCM_ControlResponse
+        VbCOMM_BCM_CruiseSwLimitMain
+        VbCOMM_BCM_CruiseSwMain
+        VbCOMM_BCM_CruiseSwResume
+        VbCOMM_BCM_CruiseSwSet
+        VbCOMM_BCM_CruiseSwTimeGapMinus
+        VbCOMM_BCM_CruiseSwTimeGapPlus
+        VbCOMM_BCM_CruiseSwValid
+        VbCOMM_BCM_DriverDoorStatus
+        VbCOMM_BCM_DriverSeatBelt
+        VbCOMM_BCM_DriverSeatBeltValid
+        VbCOMM_BCM_FrontHoodStatus
+        VbCOMM_BCM_HighBeamSwitch
+        VbCOMM_BCM_IgnitionKeyState
+        VbCOMM_BCM_LeftTurningLightState
+        VbCOMM_BCM_LowBeamSwitch
+        VbCOMM_BCM_PassengerDoorStatus
+        VbCOMM_BCM_RearLeftDoorStatus
+        VbCOMM_BCM_RearRightDoorStatus
+        VbCOMM_BCM_RightTurningLightState
+        VbCOMM_BCM_TurningLightEcho
+        VbCOMM_BCM_WiperSwitch
+        VbCOMM_EMS_CoolantLevelLow
+        VbCOMM_EMS_EngineSpeedValid
+        VbCOMM_EPB_AutoholdStatus
+        VbCOMM_EPB_ParkingControlResponse
+        VbCOMM_EPB_SwitchStatus
+        VbCOMM_EPS_HandsOffWheelDetected
+        VbCOMM_EPS_HandsOnWheelDetected
+        VbCOMM_EPS_SteeringControlResponse_LCC
+        VbCOMM_EPS_SteeringControlResponse_LDW
+        VbCOMM_EPS_SteeringWheelTorqueValid
+        VbCOMM_ESP_ABSActive
+        VbCOMM_ESP_BrakeControlResponse
+        VbCOMM_ESP_MasterCylinderPressValid
+        VbCOMM_ESP_TCSActive
+        VbCOMM_PCU_PowerControlResponse
+        VbCOMM_VCU_AccelPedalOverride
+        VbCOMM_VCU_AccelPedalValid
+        VbCOMM_VCU_ActualBrakePedalSwitch
+        VbCOMM_VCU_AutodriveActiveStatus
+        VbCOMM_VCU_AutodriveMainSwitch
+        VbCOMM_VCU_BrakePedalValid
+        VbCOMM_VCU_VirtualAccelPedalValid
+        VbCOMM_VDC_LateralAccelerationValid
+        VbCOMM_VDC_LongAccelerationValid
+        VbCOMM_VDC_WheelSpeed_FLValid
+        VbCOMM_VDC_WheelSpeed_FRValid
+        VbCOMM_VDC_WheelSpeed_RL1Valid
+        VbCOMM_VDC_WheelSpeed_RL2Valid
+        VbCOMM_VDC_WheelSpeed_RR1Valid
+        VbCOMM_VDC_WheelSpeed_RR2Valid
+        VbCOMM_VDC_YawRateValid
+        VeCOMM_BCM_CruiseControlStatus
+        VeCOMM_BCM_DriveMode
+        VeCOMM_EMS_EngineState
+        VeCOMM_EMS_StartStopStatus
+        VeCOMM_EPB_ActualControlStatus
+        VeCOMM_EPB_SystemFaultStatus
+        VeCOMM_EPS_FaultLevel
+        VeCOMM_EPS_SteeringModeEcho
+        VeCOMM_ESP_SystemFaultStatus
+        VeCOMM_PCU_PowertrainFaultLevel
+        VeCOMM_TCU_ActualGearPosition
+        VeCOMM_TCU_ShiftLevelPosition
+        VeCOMM_TCU_TargetGearPositionEcho
+        VeCOMM_VCU_AutoToManualTips
+        VfCOMM_EMS_CatalystTankLevel
+        VfCOMM_EMS_EngineCoolantTemperature
+        VfCOMM_EMS_EngineOilPressure
+        VfCOMM_EMS_EngineSpeed
+        VfCOMM_EPS_ActualSteeringAngle
+        VfCOMM_EPS_SteeringAngleRate
+        VfCOMM_EPS_SteeringWheelTorque
+        VfCOMM_EPS_TargetSteeringAngleEcho
+        VfCOMM_ESP_BrakeAirTankPressure
+        VfCOMM_ESP_MasterCylinderPress
+        VfCOMM_PCU_ActualEngineTorque
+        VfCOMM_PCU_BatterySOC
+        VfCOMM_PCU_DriverDemandTorque
+        VfCOMM_PCU_EngineTorqueLoss
+        VfCOMM_PCU_MotorActualTorque
+        VfCOMM_PCU_MotorSpeed
+        VfCOMM_TCU_ActualGearRatio
+        VfCOMM_VCU_ActualAccelPedalPosition
+        VfCOMM_VCU_ActualBrakePedalPosition
+        VfCOMM_VCU_TargetAccelPedalPostionEcho
+        VfCOMM_VCU_TargetBrakePedalEcho
+        VfCOMM_VCU_VirtualAccelPedalPosition
+        VfCOMM_VDC_LateralAcceleration
+        VfCOMM_VDC_LongAcceleration
+        VfCOMM_VDC_VehicleSpeed
+        VfCOMM_VDC_WheelEncoderCounter_RL
+        VfCOMM_VDC_WheelEncoderCounter_RR
+        VfCOMM_VDC_WheelSpeed_FL
+        VfCOMM_VDC_WheelSpeed_FR
+        VfCOMM_VDC_WheelSpeed_RL1
+        VfCOMM_VDC_WheelSpeed_RL2
+        VfCOMM_VDC_WheelSpeed_RR1
+        VfCOMM_VDC_WheelSpeed_RR2
+        VfCOMM_VDC_YawRate
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_Transmit
+      /* Long identifier        */       "COMM_subsystem_integrated/Transmit"
+      /begin SUB_GROUP
+        S2_FAW_New
+        S2_ICPV_New
+        S2_Test_Mode_New
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KcCOMM_Test_Cmd_EPSXBW_En
+        KcCOMM_Test_Cmd_EPSXBW_En_ovr
+        KcCOMM_Test_Cmd_StrAngle
+        KcCOMM_Test_Cmd_StrAngle_ovr
+        KcCOMM_Test_Decs_Acc_Req
+        KcCOMM_Test_Decs_Acc_Req_ovr
+        KcCOMM_Test_Decs_Acc_Value
+        KcCOMM_Test_Decs_Acc_Value_ovr
+        KcCOMM_Test_Decs_Breake_Req
+        KcCOMM_Test_Decs_Breake_Req_ovr
+        KcCOMM_Test_Decs_Breake_Value
+        KcCOMM_Test_Decs_Breake_Value_ovr
+        KcCOMM_Test_mode
+        KeCOMM_VehicleCANbusConfig
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbCOMM_ADCU_AutodriveEnable
+        VbCOMM_ADCU_BCMControlEnable
+        VbCOMM_ADCU_BackFogLghtRequest
+        VbCOMM_ADCU_BrakeEnable
+        VbCOMM_ADCU_BrakeLightRequest
+        VbCOMM_ADCU_EmergencyLightRequest
+        VbCOMM_ADCU_FrontFogLightRequest
+        VbCOMM_ADCU_HighBeamRequest
+        VbCOMM_ADCU_HornRequest
+        VbCOMM_ADCU_LaunchRequest
+        VbCOMM_ADCU_LeftTurningLightRequest
+        VbCOMM_ADCU_LowBeamRequest
+        VbCOMM_ADCU_OverSpeedWarning
+        VbCOMM_ADCU_ParkingControlEnable
+        VbCOMM_ADCU_ParkingPressureRequest
+        VbCOMM_ADCU_PositionLightRequest
+        VbCOMM_ADCU_PowerEnable
+        VbCOMM_ADCU_RightTurningLightRequest
+        VbCOMM_ADCU_SpeedDownIndicator
+        VbCOMM_ADCU_SpeedUpIndicator
+        VbCOMM_ADCU_SteeringAngleEnable
+        VbCOMM_ADCU_TargetGearEnable
+        VeCOMM_ADCU_ParkingControlValue
+        VeCOMM_ADCU_TargetGearValue
+        VfCOMM_ADCU_BrakeDecelValue
+        VfCOMM_ADCU_BrakePressureValue
+        VfCOMM_ADCU_PowerAccelValue
+        VfCOMM_ADCU_PowerTorqueValue
+        VfCOMM_ADCU_SteeringAngleValue
+        VfCOMM_ADCU_TargetVehicleSpeed
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Subsystem
+      /* Long identifier        */       "COMM_subsystem_integrated/Receive/Subsystem"
+      /begin REF_CHARACTERISTIC
+        KfACCS_d_VEH_WheelDiameter
+        KfCOMM_Ang_VEH_AngOrigin2FrontWheel
+        KfCOMM_VEH_Mass
+        KfCOMM_VEH_StiffnessFront
+        KfCOMM_VEH_StiffnessRear
+        KfCOMM_VEH_YawInertia_Z
+        KfCOMM_d_VEH_DisCentorid2Front
+        KfCOMM_d_VEH_DisFront2Rear
+        KfCOMM_d_VEH_DisLeft2Right
+        KfCOMM_d_VEH_DisOrigin2End
+        KfCOMM_d_VEH_DisOrigin2FrontWheel
+        KfCOMM_d_VEH_DisOrigin2Head
+        KfCOMM_d_VEH_DisOrigin2RearAxle
+        KfCOMM_d_VEH_Length
+        KfCOMM_d_VEH_MinTurnRadius
+        KfCOMM_d_VEH_Width
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_iEV7S_New
+      /* Long identifier        */       "COMM_subsystem_integrated/Receive/iEV7S_New"
+      /begin REF_CHARACTERISTIC
+        KfCOMM_a_VCULongAccOffset
+        KfCOMM_r_VCULongAccSlope
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_iVISTA_New
+      /* Long identifier        */       "COMM_subsystem_integrated/Receive/iVISTA_New"
+      /begin REF_CHARACTERISTIC
+        KfCOMM_a_VCULongAccOffset
+        KfCOMM_r_VCULongAccSlope
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_FAW_New
+      /* Long identifier        */       "COMM_subsystem_integrated/Transmit/FAW New"
+      /begin SUB_GROUP
+        S40_Command_Mapping
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KcCOMM_FirstGearRatio
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_ICPV_New
+      /* Long identifier        */       "COMM_subsystem_integrated/Transmit/ICPV New"
+      /begin SUB_GROUP
+        S41_EPB_clamped
+        S41_EPB_released
+        S41_EPB_releasing
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KcCOMM_BrakePedalMax
+        KcCOMM_BrakePedalMin
+        KcCOMM_GasPedalMax
+        KcCOMM_GasPedalMin
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VfCOMM_max_gas_pedal_EPB
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_Test_Mode_New
+      /* Long identifier        */       "COMM_subsystem_integrated/Transmit/Test_Mode_New"
+      /begin REF_CHARACTERISTIC
+        KbCOMM_Test_BckFogLamp_Req
+        KbCOMM_Test_BrakePrechargeRequest
+        KbCOMM_Test_Cmd_AccPelEnable
+        KbCOMM_Test_Cmd_BrakeLightReq
+        KbCOMM_Test_Cmd_BrkPelEnable
+        KbCOMM_Test_Cmd_ParkingCtrlEnable
+        KbCOMM_Test_Cmd_TgtSftEnable
+        KbCOMM_Test_Decs_DippedBeam_Req
+        KbCOMM_Test_Decs_HighBeam_Req
+        KbCOMM_Test_Decs_LftLmp_Req
+        KbCOMM_Test_Decs_Light_Req
+        KbCOMM_Test_Decs_RihtLmp_Req
+        KbCOMM_Test_Decs_iBCM_Req
+        KbCOMM_Test_FrontFogLamp_Req
+        KbCOMM_Test_Horn_Req
+        KbCOMM_Test_Over_Speed
+        KbCOMM_Test_SlowDown_Indication
+        KbCOMM_Test_SpeedUp_Indication
+        KbCOMM_Test_Stop_Request
+        KbCOMM_Test_WarnLight_Req
+        KbCOMM_Test_driveoff_Req
+        KcCOMM_Test_Cmd_ATOModEnable
+        KcCOMM_Test_Cmd_AccPelPosAct
+        KcCOMM_Test_Cmd_BrkPelPosAct
+        KcCOMM_Test_Cmd_EPSXBW_En
+        KcCOMM_Test_Cmd_StrAngle
+        KcCOMM_Test_Cmd_StrAngleSpd
+        KcCOMM_Test_Cmd_TgtSft
+        KcCOMM_Test_Decs_Acc_Value
+        KcCOMM_Test_Decs_Breake_Value
+        KcCOMM_Test_Tar_vehiclespd
+        KeCOMM_Test_Cmd_ParkingCtrlValue
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S40_Command_Mapping
+      /* Long identifier        */       "COMM_subsystem_integrated/Transmit/FAW New/Command_Mapping"
+      /begin SUB_GROUP
+        S46_T03
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KbCOMM_Test_Decs_iBCM_Req
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S41_EPB_clamped
+      /* Long identifier        */       "COMM_subsystem_integrated/Transmit/ICPV New/EPB_clamped"
+      /begin REF_CHARACTERISTIC
+        KcCOMM_GasPedalMinEPB
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S41_EPB_released
+      /* Long identifier        */       "COMM_subsystem_integrated/Transmit/ICPV New/EPB_released"
+      /begin REF_CHARACTERISTIC
+        KcCOMM_GasPedalMax
+        KcCOMM_GasPedalRampEPB
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S41_EPB_releasing
+      /* Long identifier        */       "COMM_subsystem_integrated/Transmit/ICPV New/EPB_releasing"
+      /begin REF_CHARACTERISTIC
+        KcCOMM_GasPedalMaxEPB
+        KcCOMM_GasPedalRampEPB
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S46_T03
+      /* Long identifier        */       "COMM_subsystem_integrated/Transmit/FAW New/Command_Mapping/T03"
+      /begin REF_CHARACTERISTIC
+        KcCOMM_TorqCtrlPriority_Active
+        KcCOMM_TorqCtrlPriority_Default
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF COMM_subsystem_integrated.a2l */

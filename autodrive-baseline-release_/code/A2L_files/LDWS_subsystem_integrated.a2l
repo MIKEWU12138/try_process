@@ -1,0 +1,1818 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     LDWS_subsystem_integrated.a2l
+ *
+ * Code generation for model "LDWS_subsystem_integrated".
+ *
+ * Model version              : 1.384
+ * Simulink Coder version : 8.13 (R2017b) 24-Jul-2017
+ * C source code generated on : Tue Jun  9 11:15:51 2020
+ * 
+ * Target selection: ert.tlc
+ * Embedded hardware selection: Infineon->TriCore
+ * Code generation objectives: 
+ *    1. MISRA C:2012 guidelines
+ *    2. Safety precaution
+ *    3. Execution efficiency
+ *    4. RAM efficiency
+ *    5. ROM efficiency
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_Ang_BkToCnrAng  
+      /* Long Identifier        */      "The angle X axis and the line connecting center of rear axle and front tire."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_Ang_BkToCnrAng@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_rad 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.5707963267948966
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_Ang_SuppSteerAngThrsh  
+      /* Long Identifier        */      "The suppression threshold for Steer Angle"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_Ang_SuppSteerAngThrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single__ 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      360.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_M_SuppTorque  
+      /* Long Identifier        */      "The torque limit that could be treated as suppression"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_M_SuppTorque@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_NM 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_c_CurvLwrBnd  
+      /* Long Identifier        */      "The curvature upper bound for ODD"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_c_CurvLwrBnd@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_1_m 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      0.01
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_c_CurvUprBnd  
+      /* Long Identifier        */      "The curvature lower bound for ODD"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_c_CurvUprBnd@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_1_m 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      0.01
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_d_BkToFrtCnrDist  
+      /* Long Identifier        */      "The distance between one fo the front tires to the center of rear axle."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_d_BkToFrtCnrDist@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_m 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      20.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_d_EdgBuff  
+      /* Long Identifier        */      "The edge buffer that added to the calcualted distance to lane markers"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_d_EdgBuff@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_m 
+      /* Lower Limit            */      -2.0 
+      /* Upper Limit            */      2.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_d_LnWidthLwrBnd  
+      /* Long Identifier        */      "The lane width lower bound for ODD"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_d_LnWidthLwrBnd@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_m 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_d_LnWidthUprBnd  
+      /* Long Identifier        */      "The lane width upper bound for ODD"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_d_LnWidthUprBnd@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_m 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_d_WarnLineLvlOne  
+      /* Long Identifier        */      "When vehicle speed is higher than 1.0m/s, the earliest warning line shall be placed no more than 1.5m inside the lane boundary."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_d_WarnLineLvlOne@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_m 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.5
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_d_WarnLineLvlThree  
+      /* Long Identifier        */      "When vehicle speed is not higher than 0.5 m/s, the earliest warning line shall be placed no more than 0.75m inside the lane boundary."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_d_WarnLineLvlThree@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_m 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      0.75
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_k_CurvBuffCoe  
+      /* Long Identifier        */      "The coefficient that multiples the distance to lanemarker when the vehicle is driving under large curavture."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_k_CurvBuffCoe@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      2.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_k_WarnLineLvlTwo  
+      /* Long Identifier        */      "When vehicle speed is higher than 0.5m/s but not  higher than 1.0m/s, the earliest warning line shall be placed no more than 1.5*Va m inside the lane boundary"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_k_WarnLineLvlTwo@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.5
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_TLCThrsh  
+      /* Long Identifier        */      "Time to lane crossing threshold"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_TLCThrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_s 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      2.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_v_SpdLwrBnd  
+      /* Long Identifier        */      "The speed lower bound for ODD"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_v_SpdLwrBnd@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_m_s 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      55.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_v_SpdUprBnd  
+      /* Long Identifier        */      "The speed upper bound for ODD"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_v_SpdUprBnd@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single_m_s 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      55.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_v_SuppSteerRateThrsh  
+      /* Long Identifier        */      "The suppression threshold for Steer Rate"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_v_SuppSteerRateThrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_single___s 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      360.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KcLDWS_CntSample  
+      /* Long Identifier        */      "The sample time that state machine uses in a loop."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KcLDWS_CntSample@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      1.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_CntMaxWarnHold  
+      /* Long Identifier        */      "The maximum time that a warning satte is allowed to last"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_CntMaxWarnHold@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_CntMinWarnHold  
+      /* Long Identifier        */      "The minimum time that a warning state shall last."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_CntMinWarnHold@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_CntOnHold  
+      /* Long Identifier        */      "The bouncing time that avoids wrong trigger."
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_CntOnHold@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_CurvNotValidTime  
+      /* Long Identifier        */      "The time that Enabling Manager uses to reset condition for curvature"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_CurvNotValidTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_CurvValidTime  
+      /* Long Identifier        */      "The time that Enabling Manager uses to set condition for curvature"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_CurvValidTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_LnMkrMissThrsh  
+      /* Long Identifier        */      "The maximum time that a lane marker could termporarily go missing"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_LnMkrMissThrsh@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_LnMkrNotValidTime  
+      /* Long Identifier        */      "The time that Enabling Manager uses set condion for lane marker"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_LnMkrNotValidTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_LnMkrValidTime  
+      /* Long Identifier        */      "The time that Enabling Manager uses reset condition for lane marker"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_LnMkrValidTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_LnWidthNotValidTime  
+      /* Long Identifier        */      "The time that Enabling Manager uses to reset condition for lane width"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_LnWidthNotValidTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_LnWidthValidTime  
+      /* Long Identifier        */      "The time that enabling manager uses to set condition for lane width"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_LnWidthValidTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_SpdRngNotValidTime  
+      /* Long Identifier        */      "The time that enabling manager uses to reset condition for speed range"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_SpdRngNotValidTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_SpdRngValidTime  
+      /* Long Identifier        */      "The time that enabling manager uses to set condtion for speed range"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_SpdRngValidTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_SuppIndiTime  
+      /* Long Identifier        */      "The time that indicator could be treated as suppression"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_SuppIndiTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_SuppSteerAngTime  
+      /* Long Identifier        */      "The time that steer angle could be treated as suppression"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_SuppSteerAngTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_SuppSteerRateTime  
+      /* Long Identifier        */      "The time that steer rate could be treated as suppression"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_SuppSteerRateTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_t_SuppTorqueTime  
+      /* Long Identifier        */      "The time that steer toque could be treated as suppression"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_t_SuppTorqueTime@ */ 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint16 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLDWS_r_LaMkrQlt  
+      /* Long Identifier        */      "Lane marker quality threshold"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLDWS_r_LaMkrQlt@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbLDWS_EnableSwitch  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbLDWS_EnableSwitch@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbLDWS_SuppLeSwitch  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbLDWS_SuppLeSwitch@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbLDWS_SuppRiSwitch  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbLDWS_SuppRiSwitch@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbLDWS_ThetaSwitch  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbLDWS_ThetaSwitch@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LDWS_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_SteerAngleRate
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_SteerAngleRate@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_BackToRiDist
+      /* Long identifier        */      "The distacne bewteen center of rear axle and right lane marker"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_BackToRiDist@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_Theta
+      /* Long identifier        */      "The angle between linear velocity and heading"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_Theta@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_Vx
+      /* Long identifier        */      "The value of Vx"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_Vx@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_Vy
+      /* Long identifier        */      "The value of Vy"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_Vy@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_VLatLe
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_VLatLe@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_EdgeLaneLe
+      /* Long identifier        */      "The vertical distacne between left front wheel and left lane marker"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_EdgeLaneLe@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_TLCLe
+      /* Long identifier        */      "The time to collision of left side"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_TLCLe@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_EdgeLaneRi
+      /* Long identifier        */      "The vertical distacne between right front wheel and right lane marker"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_EdgeLaneRi@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_VLatRi
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_VLatRi@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_TLCRi
+      /* Long identifier        */      "The time to collision of right side"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_TLCRi@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_SteerAngle
+      /* Long identifier        */      "The vehicle's steering angle"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_SteerAngle@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_SteerTorque
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_SteerTorque@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_Curvature
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_Curvature@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_LeC0Filtd
+      /* Long identifier        */      "The C0 coefficient of left lane marker after filtering"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_LeC0Filtd@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_RiC0Filtd
+      /* Long identifier        */      "The C0 coefficient of right lane marker after filtering"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_RiC0Filtd@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_LeC1Filtd
+      /* Long identifier        */      "The C1 coefficient of left lane marker after filtering"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_LeC1Filtd@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_RiC1Filtd
+      /* Long identifier        */      "The C1 coefficient of right lane marker after filtering"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_RiC1Filtd@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLDWS_BackToLeDist
+      /* Long identifier        */      "The distacne bewteen center of rear axle and left lane marker"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLDWS_BackToLeDist@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_IsOnLeLine
+      /* Long identifier        */      "The vehicle is on left lane marker or not"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_IsOnLeLine@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_LeadDrctn
+      /* Long identifier        */      "The heading of vehicle is left or right. True is on left, fale is on right."
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_LeadDrctn@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_ActLeLDW
+      /* Long identifier        */      "The left LDW is whether trggered or not"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_ActLeLDW@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_IsOnRiLine
+      /* Long identifier        */      "The vehicle is on right lane marker or not"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_IsOnRiLine@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_ActRiLDW
+      /* Long identifier        */      "The right LDW is whether triggered or not"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_ActRiLDW@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_LeIndicatorSt
+      /* Long identifier        */      "The status of right indicator"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_LeIndicatorSt@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_SuppLe
+      /* Long identifier        */      "The left LDW is whether suppressed or not"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_SuppLe@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_RiIndicatorSt
+      /* Long identifier        */      "The status of right indicator"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_RiIndicatorSt@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_SuppRi
+      /* Long identifier        */      "The right LDW is whether suppressed or not"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_SuppRi@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_RdEnblLe
+      /* Long identifier        */      "The left Lane Marker is whether enabled or not"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_RdEnblLe@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_RdEnblRi
+      /* Long identifier        */      "The right Lane Marker is whether enabled or not"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_RdEnblRi@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_WrnSt
+      /* Long identifier        */      "The warning is whether issued or not"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_WrnSt@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_EnabledLDW
+      /* Long identifier        */      "The system is whether enabled or not"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_EnabledLDW@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_SpdRngValid
+      /* Long identifier        */      "The ODD of speed range is whether fullfiled"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_SpdRngValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_CurvValid
+      /* Long identifier        */      "The ODD of lane curvature is whether fullfiled"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_CurvValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_WidthValid
+      /* Long identifier        */      "The ODD of lane width is whether fullfiled"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_WidthValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbLDWS_LnMkrValid
+      /* Long identifier        */      "The ODD of lane marker is whether fullfiled"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbLDWS_LnMkrValid@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeLDWS_LaDetecSt
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_EnumLDWS_la_detec_st
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      3
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeLDWS_LaDetecSt@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeLDWS_WrnSd
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_EnumLDWS_warn_side
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      2
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeLDWS_WrnSd@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeLDWS_SysSt
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_EnumLDWS_system_st
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      2
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeLDWS_SysSt@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeLDWS_OnStateSt
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LDWS_subsystem_integrated_CM_EnumLDWS_on_state_st
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      3
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeLDWS_OnStateSt@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_single_rad
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "rad"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_single__
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "бу"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_single_NM
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "NM"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_single_1_m
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "1/m"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_single_m
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "m"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_single_s
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "s"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_single_m_s
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "m/s"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_single___s
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "бу/s"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_uint16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_EnumLDWS_la_detec_st
+      /* Long identifier        */      "Enumerated data type: EnumLDWS_la_detec_st"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      ""
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_LDWS_subsystem_integrated_CM_EnumLDWS_la_detec_st
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_LDWS_subsystem_integrated_CM_EnumLDWS_la_detec_st
+      /* Long identifier        */      "Enumerated data type: EnumLDWS_la_detec_st"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      4
+      /* Table Element          */      3 "LDWS_BothAvl"
+      /* Table Element          */      1 "LDWS_LeAvl"
+      /* Table Element          */      2 "LDWS_RiAvl"
+      /* Table Element          */      0 "LDWS_NotAvl"
+    /end COMPU_VTAB
+    
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_EnumLDWS_warn_side
+      /* Long identifier        */      "Enumerated data type: EnumLDWS_warn_side"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      ""
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_LDWS_subsystem_integrated_CM_EnumLDWS_warn_side
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_LDWS_subsystem_integrated_CM_EnumLDWS_warn_side
+      /* Long identifier        */      "Enumerated data type: EnumLDWS_warn_side"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      3
+      /* Table Element          */      1 "LDWS_WarnLe"
+      /* Table Element          */      2 "LDWS_WarnRi"
+      /* Table Element          */      0 "LDWS_NoWarn"
+    /end COMPU_VTAB
+    
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_EnumLDWS_system_st
+      /* Long identifier        */      "Enumerated data type: EnumLDWS_system_st"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      ""
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_LDWS_subsystem_integrated_CM_EnumLDWS_system_st
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_LDWS_subsystem_integrated_CM_EnumLDWS_system_st
+      /* Long identifier        */      "Enumerated data type: EnumLDWS_system_st"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      3
+      /* Table Element          */      0 "LDWS_Off"
+      /* Table Element          */      1 "LDWS_On"
+      /* Table Element          */      2 "LDWS_Error"
+    /end COMPU_VTAB
+    
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LDWS_subsystem_integrated_CM_EnumLDWS_on_state_st
+      /* Long identifier        */      "Enumerated data type: EnumLDWS_on_state_st"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      ""
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_LDWS_subsystem_integrated_CM_EnumLDWS_on_state_st
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_LDWS_subsystem_integrated_CM_EnumLDWS_on_state_st
+      /* Long identifier        */      "Enumerated data type: EnumLDWS_on_state_st"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      4
+      /* Table Element          */      0 "LDWS_Enabling"
+      /* Table Element          */      1 "LDWS_Standby"
+      /* Table Element          */      2 "LDWS_Active"
+      /* Table Element          */      3 "LDWS_Passive"
+    /end COMPU_VTAB
+    
+    
+    /begin GROUP 
+      /* Name                   */       LDWS_subsystem_integrated
+      /* Long identifier        */       "LDWS_subsystem_integrated"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_LDWS_subsystem_integrated
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_LDWS_subsystem_integrated
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated"
+      /begin SUB_GROUP
+        S1_Derivation
+        S1_EnablingManager_LDW
+        S1_LnMkrFilter_LDW
+        S1_OutputManager_LDW
+        S1_Road_Enable_Estimator_LDW
+        S1_SuppressionManager_LDW
+        S1_TriggerManager_LDW
+        S1_WarningManager_LDW
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Derivation
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/Derivation"
+      /begin REF_MEASUREMENT
+        VfLDWS_SteerAngleRate
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_EnablingManager_LDW
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/EnablingManager_LDW"
+      /begin SUB_GROUP
+        S3_ResetCondition
+        S3_SR_FF
+        S3_SetCondition
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KfLDWS_c_CurvLwrBnd
+        KfLDWS_c_CurvUprBnd
+        KfLDWS_d_LnWidthLwrBnd
+        KfLDWS_d_LnWidthUprBnd
+        KfLDWS_v_SpdLwrBnd
+        KfLDWS_v_SpdUprBnd
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbLDWS_CurvValid
+        VbLDWS_LnMkrValid
+        VbLDWS_SpdRngValid
+        VbLDWS_WidthValid
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_LnMkrFilter_LDW
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/LnMkrFilter_LDW"
+      /begin SUB_GROUP
+        S4_Filter_Left
+        S4_Filter_Right
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VfLDWS_BackToLeDist
+        VfLDWS_Curvature
+        VfLDWS_LeC1Filtd
+        VfLDWS_RiC1Filtd
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_OutputManager_LDW
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/OutputManager_LDW"
+      /begin REF_MEASUREMENT
+        VbLDWS_WrnSt
+        VeLDWS_LaDetecSt
+        VeLDWS_WrnSd
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_Road_Enable_Estimator_LDW
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/Road_Enable_Estimator_LDW"
+      /begin SUB_GROUP
+        S6_Subsystem
+        S6_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_SuppressionManager_LDW
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/SuppressionManager_LDW"
+      /begin SUB_GROUP
+        S7_DtrmnSuppLe
+        S7_DtrmnSuppRi
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KbLDWS_SuppLeSwitch
+        KbLDWS_SuppRiSwitch
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbLDWS_LeIndicatorSt
+        VbLDWS_RiIndicatorSt
+        VfLDWS_SteerTorque
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_TriggerManager_LDW
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW"
+      /begin SUB_GROUP
+        S8_DtrmnActLe
+        S8_DtrmnActRi
+        S8_LanePositionConstraint
+        S8_LeadDirectionCondition
+        S8_TTLCondition
+        S8_ThetaCalc
+        S8_VehicleToBdlnCalc
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        VbLDWS_ActLeLDW
+        VbLDWS_ActRiLDW
+        VfLDWS_BackToRiDist
+        VfLDWS_SteerAngle
+        VfLDWS_Vx
+        VfLDWS_Vy
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_WarningManager_LDW
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/WarningManager_LDW"
+      /begin REF_CHARACTERISTIC
+        KbLDWS_EnableSwitch
+        KcLDWS_CntSample
+        KfLDWS_t_CntMaxWarnHold
+        KfLDWS_t_CntMinWarnHold
+        KfLDWS_t_CntOnHold
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VeLDWS_OnStateSt
+        VeLDWS_SysSt
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_ResetCondition
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/EnablingManager_LDW/ResetCondition"
+      /begin REF_CHARACTERISTIC
+        KcLDWS_CntSample
+        KfLDWS_t_CurvNotValidTime
+        KfLDWS_t_LnMkrNotValidTime
+        KfLDWS_t_LnWidthNotValidTime
+        KfLDWS_t_SpdRngNotValidTime
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_SR_FF
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/EnablingManager_LDW/SR_FF"
+      /begin REF_MEASUREMENT
+        VbLDWS_EnabledLDW
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_SetCondition
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/EnablingManager_LDW/SetCondition"
+      /begin REF_CHARACTERISTIC
+        KcLDWS_CntSample
+        KfLDWS_t_CurvValidTime
+        KfLDWS_t_LnMkrValidTime
+        KfLDWS_t_LnWidthValidTime
+        KfLDWS_t_SpdRngValidTime
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_Filter_Left
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/LnMkrFilter_LDW/Filter_Left"
+      /begin REF_MEASUREMENT
+        VfLDWS_LeC0Filtd
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_Filter_Right
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/LnMkrFilter_LDW/Filter_Right"
+      /begin REF_MEASUREMENT
+        VfLDWS_RiC0Filtd
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_Subsystem
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/Road_Enable_Estimator_LDW/Subsystem"
+      /begin REF_CHARACTERISTIC
+        KcLDWS_CntSample
+        KfLDWS_r_LaMkrQlt
+        KfLDWS_t_LnMkrMissThrsh
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbLDWS_RdEnblLe
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S6_Subsystem1
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/Road_Enable_Estimator_LDW/Subsystem1"
+      /begin REF_CHARACTERISTIC
+        KcLDWS_CntSample
+        KfLDWS_r_LaMkrQlt
+        KfLDWS_t_LnMkrMissThrsh
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbLDWS_RdEnblRi
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_DtrmnSuppLe
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/SuppressionManager_LDW/DtrmnSuppLe"
+      /begin REF_CHARACTERISTIC
+        KcLDWS_CntSample
+        KfLDWS_Ang_SuppSteerAngThrsh
+        KfLDWS_M_SuppTorque
+        KfLDWS_t_SuppIndiTime
+        KfLDWS_t_SuppSteerAngTime
+        KfLDWS_t_SuppSteerRateTime
+        KfLDWS_t_SuppTorqueTime
+        KfLDWS_v_SuppSteerRateThrsh
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbLDWS_SuppLe
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S7_DtrmnSuppRi
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/SuppressionManager_LDW/DtrmnSuppRi"
+      /begin REF_CHARACTERISTIC
+        KcLDWS_CntSample
+        KfLDWS_Ang_SuppSteerAngThrsh
+        KfLDWS_M_SuppTorque
+        KfLDWS_t_SuppIndiTime
+        KfLDWS_t_SuppSteerAngTime
+        KfLDWS_t_SuppSteerRateTime
+        KfLDWS_t_SuppTorqueTime
+        KfLDWS_v_SuppSteerRateThrsh
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbLDWS_SuppRi
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_DtrmnActLe
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/DtrmnActLe"
+      /begin REF_CHARACTERISTIC
+        KfLDWS_t_TLCThrsh
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_DtrmnActRi
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/DtrmnActRi"
+      /begin REF_CHARACTERISTIC
+        KfLDWS_t_TLCThrsh
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_LanePositionConstraint
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/LanePositionConstraint"
+      /begin SUB_GROUP
+        S46_DtrmnIsOnLeLine
+        S46_DtrmnIsOnRiLine
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_LeadDirectionCondition
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/LeadDirectionCondition"
+      /begin REF_MEASUREMENT
+        VbLDWS_LeadDrctn
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_TTLCondition
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/TTLCondition"
+      /begin SUB_GROUP
+        S48_TLC_calculation
+        S48_v_lat_calculation
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_ThetaCalc
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/ThetaCalc"
+      /begin REF_CHARACTERISTIC
+        KbLDWS_ThetaSwitch
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VfLDWS_Theta
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_VehicleToBdlnCalc
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/VehicleToBdlnCalc"
+      /begin REF_CHARACTERISTIC
+        KfLDWS_Ang_BkToCnrAng
+        KfLDWS_c_CurvUprBnd
+        KfLDWS_d_BkToFrtCnrDist
+        KfLDWS_d_EdgBuff
+        KfLDWS_k_CurvBuffCoe
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VfLDWS_EdgeLaneLe
+        VfLDWS_EdgeLaneRi
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S46_DtrmnIsOnLeLine
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/LanePositionConstraint/DtrmnIsOnLeLine"
+      /begin REF_CHARACTERISTIC
+        KfLDWS_d_WarnLineLvlOne
+        KfLDWS_d_WarnLineLvlThree
+        KfLDWS_k_WarnLineLvlTwo
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbLDWS_IsOnLeLine
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S46_DtrmnIsOnRiLine
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/LanePositionConstraint/DtrmnIsOnRiLine"
+      /begin REF_CHARACTERISTIC
+        KfLDWS_d_WarnLineLvlOne
+        KfLDWS_d_WarnLineLvlThree
+        KfLDWS_k_WarnLineLvlTwo
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbLDWS_IsOnRiLine
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S48_TLC_calculation
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/TTLCondition/TLC_calculation"
+      /begin REF_MEASUREMENT
+        VfLDWS_TLCLe
+        VfLDWS_TLCRi
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S48_v_lat_calculation
+      /* Long identifier        */       "LDWS_subsystem_integrated/LDWS_subsystem_integrated/TriggerManager_LDW/TTLCondition/v_lat_calculation"
+      /begin REF_MEASUREMENT
+        VfLDWS_VLatLe
+        VfLDWS_VLatRi
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF LDWS_subsystem_integrated.a2l */

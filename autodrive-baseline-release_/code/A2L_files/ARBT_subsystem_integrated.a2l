@@ -1,0 +1,1385 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     ARBT_subsystem_integrated.a2l
+ *
+ * Code generation for model "ARBT_subsystem_integrated".
+ *
+ * Model version              : 1.643
+ * Simulink Coder version : 8.13 (R2017b) 24-Jul-2017
+ * C source code generated on : Tue May 19 10:42:53 2020
+ * 
+ * Target selection: ert.tlc
+ * Embedded hardware selection: Infineon->TriCore
+ * Code generation objectives: 
+ *    1. MISRA C:2012 guidelines
+ *    2. Safety precaution
+ *    3. Execution efficiency
+ *    4. RAM efficiency
+ *    5. ROM efficiency
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_autohold_timeout  
+      /* Long Identifier        */      "Unit in second"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_autohold_timeout@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_s 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_brake_req_lon_a_lowerlimit  
+      /* Long Identifier        */      "Lower limit for brake longitudinal acceleration request output (in m/s2)"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_brake_req_lon_a_lowerlimit@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_m_s2 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_brake_req_lon_a_upperlimit  
+      /* Long Identifier        */      "Upper limit for brake longitudinal acceleration request output (in m/s2)"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_brake_req_lon_a_upperlimit@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_m_s2 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_brk_ped_pos_thrsh_rec_trig  
+      /* Long Identifier        */      "Threshold of actual brake pedal position to determine if driver is taking a hard brake"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_brk_ped_pos_thrsh_rec_trig@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single__ 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_lon_a_thrsh_rec_trig  
+      /* Long Identifier        */      "Threshold of longitudinal acceleration to determine if the driver is taking a hard brake"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_lon_a_thrsh_rec_trig@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_m_s2 
+      /* Lower Limit            */      -10.0 
+      /* Upper Limit            */      0.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_power_req_lon_a_lowerlimit  
+      /* Long Identifier        */      "Lower limit for power longitudinal acceleration request output (in m/s2)"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_power_req_lon_a_lowerlimit@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_m_s2 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_power_req_lon_a_upperlimit  
+      /* Long Identifier        */      "Lower limit for power longitudinal acceleration request output (in m/s2)"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_power_req_lon_a_upperlimit@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_m_s2 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_steer_req_strwhl_angle_lowerlimit  
+      /* Long Identifier        */      "Lower limit for steer wheel angle output (in degrees)"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_steer_req_strwhl_angle_lowerlimit@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_deg 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_steer_req_strwhl_angle_upperlimit  
+      /* Long Identifier        */      "Upper limit for steer wheel angle output (in degrees)"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_steer_req_strwhl_angle_upperlimit@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_deg 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_t_false_aeb_time_gap_thrsh  
+      /* Long Identifier        */      "Time difference allowed for AEB to be triggered earlier than the start of driver hard braking
+      
+      Unit in ms
+      "
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_t_false_aeb_time_gap_thrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_ms 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_t_hard_brake_debounce_time  
+      /* Long Identifier        */      "Unit in ms. The debounce time to enter hard braking state"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_t_hard_brake_debounce_time@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_ms 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_t_hard_brake_time_out  
+      /* Long Identifier        */      "Unit in second, time out for hard braking state"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_t_hard_brake_time_out@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_sec 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_t_missed_aeb_time_gap_thrsh  
+      /* Long Identifier        */      "Time difference allowed for AEB to be triggered later than the start of driver hard braking
+      
+      Unit in ms
+      
+      "
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_t_missed_aeb_time_gap_thrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_ms 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_t_speed_debounce_time  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_t_speed_debounce_time@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -3.4E+38 
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_v_moving_speed_thrsh  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_v_moving_speed_thrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_m_s 
+      /* Lower Limit            */      0.1 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfARBT_v_standstill_speed_thrsh  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfARBT_v_standstill_speed_thrsh@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_single_m_s 
+      /* Lower Limit            */      0.1 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbARBT_power_req_mode_man_ctrl_temp  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbARBT_power_req_mode_man_ctrl_temp@ */ 
+      /* Record Layout          */      Scalar_UBYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_uint8 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbARBT_SLEW_autohold_active  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbARBT_SLEW_autohold_active@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbARBT_SLEW_gear_ctrl_accel_req  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbARBT_SLEW_gear_ctrl_accel_req@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbARBT_gear_pos_fedbck_valid  
+      /* Long Identifier        */      "Validity flag of gear position feedback signal.
+      
+      For project vehicle without gear position feedback, this calibration shall be set to 0"
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbARBT_gear_pos_fedbck_valid@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      ARBT_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      1
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_steer_req_strwhl_angle
+      /* Long identifier        */      "final steer angle req (as deg) after arbitration and saturation"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_single_deg
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_steer_req_strwhl_angle@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_steer_req_strwhl_angle_raw
+      /* Long identifier        */      "raw steer angle request after arbitration before saturation"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_single_deg
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_steer_req_strwhl_angle_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_steer_req_strwhl_torque
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_single_Nm
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_steer_req_strwhl_torque@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_power_req_lon_a_raw
+      /* Long identifier        */      "raw power request after arbitration before saturation"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_single_m_s2
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_power_req_lon_a_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_power_req_lon_a
+      /* Long identifier        */      "final power req (as m/s2) after arbitration and saturation"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_single_m_s2
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_power_req_lon_a@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_power_req_torque
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_power_req_torque@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_brake_req_lon_a_raw
+      /* Long identifier        */      "raw brake request after arbitration before saturation"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_single_m_s2
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_brake_req_lon_a_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_brake_req_lon_a
+      /* Long identifier        */      "final brake req (as m/s2) after arbitration and saturation"
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_single_m_s2
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_brake_req_lon_a@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_steer_req_mode
+      /* Long identifier        */      "0 = acceleration mode
+      1 = torque mode"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_steer_req_mode@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_power_req_mode
+      /* Long identifier        */      "0 = steering wheel angle
+      1 = steering wheel torque"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_power_req_mode@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_gear_pos_req
+      /* Long identifier        */      "Gear Pos Definition
+      0->N
+      1->D
+      13->R
+      14->P
+      15->Invalid"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_gear_pos_req@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfARBT_gear_ctrl_state
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfARBT_gear_ctrl_state@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_EPB_ctrl_mode
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_EPB_ctrl_mode@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_FCW_level_three
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_FCW_level_three@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_FCW_level_one
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_FCW_level_one@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_FCW_level_two
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_FCW_level_two@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_LDW_left
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_LDW_left@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_BSD_left_low_raw
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_BSD_left_low_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_BSD_right_low_raw
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_BSD_right_low_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_LCA_left_low_raw
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_LCA_left_low_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_LCA_right_low_raw
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_LCA_right_low_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_warn_lcw_left_req
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_warn_lcw_left_req@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_LDW_right
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_LDW_right@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_BSD_left_high_raw
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_BSD_left_high_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_LCA_left_high_raw
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_LCA_left_high_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_BSD_right_high_raw
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_BSD_right_high_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_LCA_right_high_raw
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_LCA_right_high_raw@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_FCW_level_four
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_FCW_level_four@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_FCW_level_five
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_FCW_level_five@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_warn_lcw_right_req
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_warn_lcw_right_req@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_steer_ctrl_enbl_to_comm
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_steer_ctrl_enbl_to_comm@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_aeb_triggered_flag
+      /* Long identifier        */      "Flag of whether AEB is triggered"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_aeb_triggered_flag@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_missed_aeb_flag
+      /* Long identifier        */      "Flag of whether a missed aeb event is detected"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_missed_aeb_flag@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_false_aeb_flag
+      /* Long identifier        */      "Flag of whether a false AEB event is detected
+      "
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_false_aeb_flag@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_driver_hard_brake_flag
+      /* Long identifier        */      "Flag of whether driver is taking a hard brake"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_driver_hard_brake_flag@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_power_ctrl_enbl_to_comm
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_power_ctrl_enbl_to_comm@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_brake_ctrl_enbl_to_comm
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_brake_ctrl_enbl_to_comm@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_EPB_ctrl_enbl_to_comm
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_EPB_ctrl_enbl_to_comm@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_vehicle_standstill
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_vehicle_standstill@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_EPB_switch_request
+      /* Long identifier        */      "1 = clamping request
+      0 = release request"
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_EPB_switch_request@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_gear_ctrl_enbl_to_comm
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_gear_ctrl_enbl_to_comm@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VbARBT_auto_hold_req
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VbARBT_auto_hold_req@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeARBT_steer_arbt_winner
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_EnumARBT_arbitration_winner
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      6
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeARBT_steer_arbt_winner@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeARBT_power_arbt_winner
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_EnumARBT_arbitration_winner
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      6
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeARBT_power_arbt_winner@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeARBT_brake_arbt_winner
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      ARBT_subsystem_integrated_CM_EnumARBT_arbitration_winner
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      6
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeARBT_brake_arbt_winner@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_single_s
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "s"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_single_m_s2
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "m/s2"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_single__
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "%"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_single_deg
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "deg"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_single_ms
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "ms"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_single_sec
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "sec"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_single_m_s
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "m/s"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_single_Nm
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "Nm"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      ARBT_subsystem_integrated_CM_EnumARBT_arbitration_winner
+      /* Long identifier        */      "Enumerated data type: EnumARBT_arbitration_winner"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      ""
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_ARBT_subsystem_integrated_CM_EnumARBT_arbitration_winner
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_ARBT_subsystem_integrated_CM_EnumARBT_arbitration_winner
+      /* Long identifier        */      "Enumerated data type: EnumARBT_arbitration_winner"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      7
+      /* Table Element          */      0 "ARBT_NO_REQ"
+      /* Table Element          */      1 "AEB"
+      /* Table Element          */      2 "ACC"
+      /* Table Element          */      3 "LCC"
+      /* Table Element          */      4 "LKA"
+      /* Table Element          */      5 "BRAKE_OVRD"
+      /* Table Element          */      6 "RSVD2"
+    /end COMPU_VTAB
+    
+    
+    /begin GROUP 
+      /* Name                   */       ARBT_subsystem_integrated
+      /* Long identifier        */       "ARBT_subsystem_integrated"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_ARBTIntegrated
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_ARBTIntegrated
+      /* Long identifier        */       "ARBT_subsystem_integrated/ARBTIntegrated"
+      /begin SUB_GROUP
+        S1_AccessoryArbitration
+        S1_BrakeArbitration
+        S1_PowerArbitration
+        S1_RecordTriggerArbitration
+        S1_SteerArbitration
+        S1_WarningArbitration
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_AccessoryArbitration
+      /* Long identifier        */       "ARBT_subsystem_integrated/ARBTIntegrated/AccessoryArbitration"
+      /begin SUB_GROUP
+        S3_DtrmnVehStandStill
+        S3_ElectricParkingBrakeControl
+        S3_GearPosControl
+      /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        KbARBT_SLEW_autohold_active
+        KbARBT_SLEW_gear_ctrl_accel_req
+        KfARBT_autohold_timeout
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_BrakeArbitration
+      /* Long identifier        */       "ARBT_subsystem_integrated/ARBTIntegrated/BrakeArbitration"
+      /begin REF_CHARACTERISTIC
+        KfARBT_brake_req_lon_a_lowerlimit
+        KfARBT_brake_req_lon_a_upperlimit
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbARBT_brake_ctrl_enbl_to_comm
+        VeARBT_brake_arbt_winner
+        VfARBT_brake_req_lon_a
+        VfARBT_brake_req_lon_a_raw
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_PowerArbitration
+      /* Long identifier        */       "ARBT_subsystem_integrated/ARBTIntegrated/PowerArbitration"
+      /begin REF_CHARACTERISTIC
+        KbARBT_power_req_mode_man_ctrl_temp
+        KfARBT_power_req_lon_a_lowerlimit
+        KfARBT_power_req_lon_a_upperlimit
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbARBT_power_ctrl_enbl_to_comm
+        VeARBT_power_arbt_winner
+        VfARBT_power_req_lon_a
+        VfARBT_power_req_lon_a_raw
+        VfARBT_power_req_mode
+        VfARBT_power_req_torque
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_RecordTriggerArbitration
+      /* Long identifier        */       "ARBT_subsystem_integrated/ARBTIntegrated/RecordTriggerArbitration"
+      /begin REF_CHARACTERISTIC
+        KfARBT_brk_ped_pos_thrsh_rec_trig
+        KfARBT_lon_a_thrsh_rec_trig
+        KfARBT_t_false_aeb_time_gap_thrsh
+        KfARBT_t_hard_brake_debounce_time
+        KfARBT_t_hard_brake_time_out
+        KfARBT_t_missed_aeb_time_gap_thrsh
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbARBT_aeb_triggered_flag
+        VbARBT_driver_hard_brake_flag
+        VbARBT_false_aeb_flag
+        VbARBT_missed_aeb_flag
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_SteerArbitration
+      /* Long identifier        */       "ARBT_subsystem_integrated/ARBTIntegrated/SteerArbitration"
+      /begin REF_CHARACTERISTIC
+        KfARBT_steer_req_strwhl_angle_lowerlimit
+        KfARBT_steer_req_strwhl_angle_upperlimit
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbARBT_steer_ctrl_enbl_to_comm
+        VeARBT_steer_arbt_winner
+        VfARBT_steer_req_mode
+        VfARBT_steer_req_strwhl_angle
+        VfARBT_steer_req_strwhl_angle_raw
+        VfARBT_steer_req_strwhl_torque
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_WarningArbitration
+      /* Long identifier        */       "ARBT_subsystem_integrated/ARBTIntegrated/WarningArbitration"
+      /begin REF_MEASUREMENT
+        VbARBT_BSD_left_high_raw
+        VbARBT_BSD_left_low_raw
+        VbARBT_BSD_right_high_raw
+        VbARBT_BSD_right_low_raw
+        VbARBT_FCW_level_five
+        VbARBT_FCW_level_four
+        VbARBT_FCW_level_one
+        VbARBT_FCW_level_three
+        VbARBT_FCW_level_two
+        VbARBT_LCA_left_high_raw
+        VbARBT_LCA_left_low_raw
+        VbARBT_LCA_right_high_raw
+        VbARBT_LCA_right_low_raw
+        VbARBT_LDW_left
+        VbARBT_LDW_right
+        VbARBT_warn_lcw_left_req
+        VbARBT_warn_lcw_right_req
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_DtrmnVehStandStill
+      /* Long identifier        */       "ARBT_subsystem_integrated/ARBTIntegrated/AccessoryArbitration/DtrmnVehStandStill"
+      /begin REF_CHARACTERISTIC
+        KfARBT_t_speed_debounce_time
+        KfARBT_v_moving_speed_thrsh
+        KfARBT_v_standstill_speed_thrsh
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbARBT_vehicle_standstill
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_ElectricParkingBrakeControl
+      /* Long identifier        */       "ARBT_subsystem_integrated/ARBTIntegrated/AccessoryArbitration/ElectricParkingBrakeControl"
+      /begin REF_CHARACTERISTIC
+        KbARBT_gear_pos_fedbck_valid
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VbARBT_EPB_ctrl_enbl_to_comm
+        VbARBT_EPB_ctrl_mode
+        VbARBT_EPB_switch_request
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S3_GearPosControl
+      /* Long identifier        */       "ARBT_subsystem_integrated/ARBTIntegrated/AccessoryArbitration/GearPosControl"
+      /begin REF_MEASUREMENT
+        VbARBT_auto_hold_req
+        VbARBT_gear_ctrl_enbl_to_comm
+        VfARBT_gear_ctrl_state
+        VfARBT_gear_pos_req
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF ARBT_subsystem_integrated.a2l */

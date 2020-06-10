@@ -1,0 +1,1038 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     LCAS_subsystem_integrated.a2l
+ *
+ * Code generation for model "LCAS_subsystem_integrated".
+ *
+ * Model version              : 1.452
+ * Simulink Coder version : 8.13 (R2017b) 24-Jul-2017
+ * C source code generated on : Mon Jun  8 17:19:15 2020
+ * 
+ * Target selection: ert.tlc
+ * Embedded hardware selection: Infineon->TriCore
+ * Code generation objectives: 
+ *    1. MISRA C:2012 guidelines
+ *    2. Safety precaution
+ *    3. Execution efficiency
+ *    4. RAM efficiency
+ *    5. ROM efficiency
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ProjectName "Project Comment Goes Here"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "Module Comment Goes Here"
+    
+    /begin MOD_PAR "MOD PAR Comment Goes Here"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "Mod Common Comment Here" 
+      BYTE_ORDER     MSB_LAST
+    /end MOD_COMMON
+    
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin RECORD_LAYOUT Lookup1D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BOOLEAN
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT    
+    
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_Ang_DisbleStrAngleThrshMax  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_Ang_DisbleStrAngleThrshMax@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      12.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_Ang_EnbleStrAngleThrshMax  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_Ang_EnbleStrAngleThrshMax@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      12.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_c_DisbleCurveThrshMax  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_c_DisbleCurveThrshMax@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.001 
+      /* Upper Limit            */      0.1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_c_EnbleCurveThrshMax  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_c_EnbleCurveThrshMax@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.001 
+      /* Upper Limit            */      0.1
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_d_CVLargerZone_FrontDis  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_d_CVLargerZone_FrontDis@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      3.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_d_CVLargerZone_NearDis  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_d_CVLargerZone_NearDis@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -0.5 
+      /* Upper Limit            */      0.5
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_d_CVZone_FarDis  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_d_CVZone_FarDis@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      3.0 
+      /* Upper Limit            */      6.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_d_CVZone_FrontDis  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_d_CVZone_FrontDis@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      3.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_d_CVZone_NearDis  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_d_CVZone_NearDis@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -0.5 
+      /* Upper Limit            */      0.5
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_d_VehCenterFront  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_d_VehCenterFront@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      4.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_d_VehCenterRear  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_d_VehCenterRear@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      4.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_d_VehLenth  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_d_VehLenth@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      20.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_d_VehWidth  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_d_VehWidth@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_r_ObtWidthProportion  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_r_ObtWidthProportion@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_t_TTCLargerThrsh_LowLevel  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_t_TTCLargerThrsh_LowLevel@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      3.0 
+      /* Upper Limit            */      7.5
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_t_TTCThrshLowLevel  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_t_TTCThrshLowLevel@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      3.0 
+      /* Upper Limit            */      7.5
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_t_WarnSustainedTime  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_t_WarnSustainedTime@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_v_DisbleVehSpdThrshHi  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_v_DisbleVehSpdThrshHi@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_v_DisbleVehSpdThrshLo  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_v_DisbleVehSpdThrshLo@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -5.0 
+      /* Upper Limit            */      20.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_v_EnbleVehSpdThrshHi  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_v_EnbleVehSpdThrshHi@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_v_EnbleVehSpdThrshLo  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_v_EnbleVehSpdThrshLo@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      -5.0 
+      /* Upper Limit            */      20.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_v_LatSpdThr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_v_LatSpdThr@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single_m_s 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      20.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_v_staticSpdThr  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_v_staticSpdThr@ */ 
+      /* Record Layout          */      Scalar_FLOAT32_IEEE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_single 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      10.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KfLCAS_d_CVLargerZone_FarDis  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KfLCAS_d_CVLargerZone_FarDis@ */ 
+      /* Record Layout          */      Scalar_BYTE 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_int8 
+      /* Lower Limit            */      3.0 
+      /* Upper Limit            */      6.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbLCAS_Sensor_Error  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbLCAS_Sensor_Error@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbLCAS_Sensor_Work  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbLCAS_Sensor_Work@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbLCAS_Switch  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbLCAS_Switch@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbLCAS_configLCA  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbLCAS_configLCA@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      KbLCAS_curve  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000 /* @ECU_Address@KbLCAS_curve@ */ 
+      /* Record Layout          */      Scalar_BOOLEAN 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      LCAS_subsystem_integrated_CM_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLCAS_curvature
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLCAS_curvature@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLCAS_speed_in
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLCAS_speed_in@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VaLCAS_Obt
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      /* Array Size             */
+      ARRAY_SIZE                        16
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VaLCAS_Obt@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      ViLCAS_cvwR_ID
+      /* Long identifier        */      ""
+      /* Data type              */      SLONG
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_int32
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -2147483648
+      /* Upper limit            */      2147483647
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@ViLCAS_cvwR_ID@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      ViLCAS_cvwL_ID
+      /* Long identifier        */      ""
+      /* Data type              */      SLONG
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_int32
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -2147483648
+      /* Upper limit            */      2147483647
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@ViLCAS_cvwL_ID@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VnLCAS_num_R
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VnLCAS_num_R@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VnLCAS_num_L
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VnLCAS_num_L@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VfLCAS_gear_in
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VfLCAS_gear_in@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      ViLCAS_cvwR
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@ViLCAS_cvwR@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      ViLCAS_cvwL
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@ViLCAS_cvwL@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeLCAS_active_status
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_EnumLCAS_Active_Status
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      5
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeLCAS_active_status@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeLCAS_right_warning_status_out
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_EnumLCAS_Warning_Status
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      2
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeLCAS_right_warning_status_out@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeLCAS_left_warning_status_out
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_EnumLCAS_Warning_Status
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      2
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeLCAS_left_warning_status_out@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeLCAS_right_warning_status
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_EnumLCAS_Warning_Status
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      2
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeLCAS_right_warning_status@ */
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      VeLCAS_left_warning_status
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      LCAS_subsystem_integrated_CM_EnumLCAS_Warning_Status
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      2
+      ECU_ADDRESS                       0x0000 /* @ECU_Address@VeLCAS_left_warning_status@ */
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LCAS_subsystem_integrated_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LCAS_subsystem_integrated_CM_single_m_s
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      "m/s"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LCAS_subsystem_integrated_CM_int8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LCAS_subsystem_integrated_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LCAS_subsystem_integrated_CM_int32
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%10.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LCAS_subsystem_integrated_CM_uint16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LCAS_subsystem_integrated_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LCAS_subsystem_integrated_CM_EnumLCAS_Active_Status
+      /* Long identifier        */      "Enumerated data type: EnumLCAS_Active_Status"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      ""
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_LCAS_subsystem_integrated_CM_EnumLCAS_Active_Status
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_LCAS_subsystem_integrated_CM_EnumLCAS_Active_Status
+      /* Long identifier        */      "Enumerated data type: EnumLCAS_Active_Status"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      6
+      /* Table Element          */      0 "LCAS_NONE"
+      /* Table Element          */      1 "LCAS_OFF"
+      /* Table Element          */      2 "LCAS_INACTIVE"
+      /* Table Element          */      3 "LCAS_ERROR"
+      /* Table Element          */      4 "LCAS_ACTIVE"
+      /* Table Element          */      5 "LCAS_SELF_CHECK"
+    /end COMPU_VTAB
+    
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      LCAS_subsystem_integrated_CM_EnumLCAS_Warning_Status
+      /* Long identifier        */      "Enumerated data type: EnumLCAS_Warning_Status"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      ""
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_LCAS_subsystem_integrated_CM_EnumLCAS_Warning_Status
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_LCAS_subsystem_integrated_CM_EnumLCAS_Warning_Status
+      /* Long identifier        */      "Enumerated data type: EnumLCAS_Warning_Status"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      3
+      /* Table Element          */      0 "LCAS_NO_WARNING"
+      /* Table Element          */      1 "LCAS_WARNING_LOW_LEVEL"
+      /* Table Element          */      2 "LCAS_WARNING_HIGH_LEVEL"
+    /end COMPU_VTAB
+    
+    
+    /begin GROUP 
+      /* Name                   */       LCAS_subsystem_integrated
+      /* Long identifier        */       "LCAS_subsystem_integrated"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_LCAS_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_LCAS_Subsystem
+      /* Long identifier        */       "LCAS_subsystem_integrated/LCAS_Subsystem"
+      /begin SUB_GROUP
+        S1_CalcLLCAEnabledSubsystem
+        S1_CalcRLCAEnabledSubsystem
+        S1_DtmnLCAEnabledSubsystem
+        S1_LCAS_input_Subsystem
+        S1_LCAS_output_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_CalcLLCAEnabledSubsystem
+      /* Long identifier        */       "LCAS_subsystem_integrated/LCAS_Subsystem/CalcLLCAEnabledSubsystem"
+      /begin REF_MEASUREMENT
+        VeLCAS_left_warning_status
+        ViLCAS_cvwL
+        ViLCAS_cvwL_ID
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_CalcRLCAEnabledSubsystem
+      /* Long identifier        */       "LCAS_subsystem_integrated/LCAS_Subsystem/CalcRLCAEnabledSubsystem"
+      /begin REF_MEASUREMENT
+        VeLCAS_right_warning_status
+        ViLCAS_cvwR
+        ViLCAS_cvwR_ID
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_DtmnLCAEnabledSubsystem
+      /* Long identifier        */       "LCAS_subsystem_integrated/LCAS_Subsystem/DtmnLCAEnabledSubsystem"
+      /begin REF_CHARACTERISTIC
+        KbLCAS_Sensor_Error
+        KbLCAS_Sensor_Work
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_LCAS_input_Subsystem
+      /* Long identifier        */       "LCAS_subsystem_integrated/LCAS_Subsystem/LCAS_input_Subsystem"
+      /begin SUB_GROUP
+        S5_LCAS_Calibration_Subsystem
+        S5_LCAS_CvrtInput_Subsystem
+        S5_LCAS_CvrtObtVecFunctionEnabled
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S1_LCAS_output_Subsystem
+      /* Long identifier        */       "LCAS_subsystem_integrated/LCAS_Subsystem/LCAS_output_Subsystem"
+      /begin REF_MEASUREMENT
+        VeLCAS_active_status
+        VeLCAS_left_warning_status_out
+        VeLCAS_right_warning_status_out
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_LCAS_Calibration_Subsystem
+      /* Long identifier        */       "LCAS_subsystem_integrated/LCAS_Subsystem/LCAS_input_Subsystem/LCAS_Calibration_Subsystem"
+      /begin REF_CHARACTERISTIC
+        KbLCAS_Switch
+        KbLCAS_configLCA
+        KfLCAS_Ang_DisbleStrAngleThrshMax
+        KfLCAS_Ang_EnbleStrAngleThrshMax
+        KfLCAS_c_DisbleCurveThrshMax
+        KfLCAS_c_EnbleCurveThrshMax
+        KfLCAS_d_CVLargerZone_FarDis
+        KfLCAS_d_CVLargerZone_FrontDis
+        KfLCAS_d_CVLargerZone_NearDis
+        KfLCAS_d_CVZone_FarDis
+        KfLCAS_d_CVZone_FrontDis
+        KfLCAS_d_CVZone_NearDis
+        KfLCAS_d_VehCenterFront
+        KfLCAS_d_VehCenterRear
+        KfLCAS_d_VehLenth
+        KfLCAS_d_VehWidth
+        KfLCAS_r_ObtWidthProportion
+        KfLCAS_t_TTCLargerThrsh_LowLevel
+        KfLCAS_t_TTCThrshLowLevel
+        KfLCAS_t_WarnSustainedTime
+        KfLCAS_v_DisbleVehSpdThrshHi
+        KfLCAS_v_DisbleVehSpdThrshLo
+        KfLCAS_v_EnbleVehSpdThrshHi
+        KfLCAS_v_EnbleVehSpdThrshLo
+        KfLCAS_v_LatSpdThr
+        KfLCAS_v_staticSpdThr
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_LCAS_CvrtInput_Subsystem
+      /* Long identifier        */       "LCAS_subsystem_integrated/LCAS_Subsystem/LCAS_input_Subsystem/LCAS_CvrtInput_Subsystem"
+      /begin REF_CHARACTERISTIC
+        KbLCAS_curve
+      /end REF_CHARACTERISTIC
+      /begin REF_MEASUREMENT
+        VfLCAS_curvature
+        VfLCAS_gear_in
+        VfLCAS_speed_in
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S5_LCAS_CvrtObtVecFunctionEnabled
+      /* Long identifier        */       "LCAS_subsystem_integrated/LCAS_Subsystem/LCAS_input_Subsystem/LCAS_CvrtObtVecFunctionEnabled"
+      /begin REF_MEASUREMENT
+        VaLCAS_Obt
+        VnLCAS_num_L
+        VnLCAS_num_R
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF LCAS_subsystem_integrated.a2l */
